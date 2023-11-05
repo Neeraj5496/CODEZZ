@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>DBMS</h2>
+            <a href="java.html">DBMS-Overview</a>
+            <a href="architecture.html">DBMS-Architecture</a>
+            <a href="data-models.html">DBMS-Data Models</a>
+            <a href="data-schemes.html">DBMS-Data Schemas</a>
+            <a href="data-independence.html">DBMS-Data Independence</a>
+
+            <h2>Entity Relationship Model</h2>
+            <a href="ebm.html">DBMS-ER Basic Concepts</a>
+            <a href="erbc.html">DBMS-ER Diagram Representation</a>
+
+            <h2>Relation Model</h2>
+            <a href="">DBMS-Codd's Rules</a>
+            <a href="">DBMS-Relational Data Models</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>DBMS-Overview</h2>
+
+        <h2>Database Schema</h2>
+<p>A database schema is the skeleton structure that represents the logical view of the entire database. It defines how the data is organized and how the relations among them are associated. It formulates all the constraints that are to be applied on the data.</p>
+<p>A database schema defines its entities and the relationship among them. It contains a descriptive detail of the database, which can be depicted by means of schema diagrams. It’s the database designers who design the schema to help programmers understand the database and make it useful.</p>
+<img src="/dbms_schemas.png" caption="Database Schemas" />
+<p>A database schema can be divided broadly into two categories &minus;</p>
+<ol>
+<li><p><b>Physical Database Schema</b> &minus; This schema pertains to the actual storage of data and its form of storage like files, indices, etc. It defines how the data will be stored in a secondary storage.</p></li>
+<li><p><b>Logical Database Schema</b> &minus; This schema defines all the logical constraints that need to be applied on the data stored. It defines tables, views, and integrity constraints.</p></li>
+</ol>
+<h2>Database Instance</h2>
+<p>It is important that we distinguish these two terms individually. Database schema is the skeleton of database. It is designed when the database doesn't exist at all. Once the database is operational, it is very difficult to make any changes to it. A database schema does not contain any data or information.</p>
+<p>A database instance is a state of operational database with data at any given time. It contains a snapshot of the database. Database instances tend to change with time. A DBMS ensures that its every instance (state) is in a valid state, by diligently following all the validations, constraints, and conditions that the database designers have imposed.</p><br><br>
+<br><br>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

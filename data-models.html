@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>DBMS</h2>
+            <a href="java.html">DBMS-Overview</a>
+            <a href="architecture.html">DBMS-Architecture</a>
+            <a href="data-models.html">DBMS-Data Models</a>
+            <a href="data-schemes.html">DBMS-Data Schemas</a>
+            <a href="data-independence.html">DBMS-Data Independence</a>
+
+            <h2>Entity Relationship Model</h2>
+            <a href="ebm.html">DBMS-ER Basic Concepts</a>
+            <a href="erbc.html">DBMS-ER Diagram Representation</a>
+
+            <h2>Relation Model</h2>
+            <a href="">DBMS-Codd's Rules</a>
+            <a href="">DBMS-Relational Data Models</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>DBMS-Overview</h2>
+
+        <p>Data models define how the logical structure of a database is modeled. Data Models are fundamental entities to introduce abstraction in a DBMS. Data models define how data is connected to each other and how they are processed and stored inside the system.</p>
+<p>The very first data model could be flat data-models, where all the data used are to be kept in the same plane. Earlier data models were not so scientific, hence they were prone to introduce lots of duplication and update anomalies.</p>
+<h2>Entity-Relationship Model</h2>
+<p>Entity-Relationship (ER) Model is based on the notion of real-world entities and relationships among them. While formulating real-world scenario into the database model, the ER Model creates entity set, relationship set, general attributes and constraints.</p>
+<p>ER Model is best used for the conceptual design of a database.</p>
+<p>ER Model is based on &minus;</p>
+<ol>
+<li><p><b>Entities</b> and their <i>attributes.</i></p></li>
+<li><p><b>Relationships</b> among entities.</p></li></ol>
+<br>
+<p>These concepts are explained below.</p>
+<img src="/er_model_intro.png" caption="ER Model"  />
+
+<p><b>Entity</b> &minus; An entity in an ER Model is a real-world entity having properties called <b>attributes</b>. Every <b>attribute</b> is defined by its set of values called <b>domain</b>. For example, in a school database, a student is considered as an entity. Student has various attributes like name, age, class, etc.</p><br>
+<p><b>Relationship</b> &minus; The logical association among entities is called <b><i>relationship</i></b>. Relationships are mapped with entities in various ways. Mapping cardinalities define the number of association between two entities.</p>
+<p>Mapping cardinalities &minus;</p>
+
+<li>one to one</li>
+<li>one to many</li>
+<li>many to one</li>
+<li>many to many</li>
+
+<h2>Relational Model</h2>
+<p>The most popular data model in DBMS is the Relational Model. It is more scientific a model than others. This model is based on first-order predicate logic and defines a table as an <b>n-ary relation</b>.</p>
+<img src="/relational_model_table.png" alt="Relational Model Table" />
+<p>The main highlights of this model are &minus;</p><br>
+
+<li>Data is stored in tables called <b>relations</b>.</li>
+<li>Relations can be normalized.</li>
+<li>In normalized relations, values saved are atomic values.</li>
+<li>Each row in a relation contains a unique value.</li>
+<li>Each column in a relation contains values from a same domain.</li>
+
+<br><br>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

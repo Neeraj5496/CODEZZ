@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>DBMS</h2>
+            <a href="java.html">DBMS-Overview</a>
+            <a href="architecture.html">DBMS-Architecture</a>
+            <a href="data-models.html">DBMS-Data Models</a>
+            <a href="data-schemes.html">DBMS-Data Schemas</a>
+            <a href="data-independence.html">DBMS-Data Independence</a>
+
+            <h2>Entity Relationship Model</h2>
+            <a href="ebm.html">DBMS-ER Basic Concepts</a>
+            <a href="erbc.html">DBMS-ER Diagram Representation</a>
+
+            <h2>Relation Model</h2>
+            <a href="codd.html">DBMS-Codd's Rules</a>
+            <a href="rdm.html">DBMS-Relational Data Models</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>DBMS-Overview</h2>
+
+        <p>Let us now learn how the ER Model is represented by means of an ER diagram. Any object, for example, entities, attributes of an entity, relationship sets, and attributes of relationship sets, can be represented with the help of an ER diagram.</p>
+<h2>Entity</h2>
+<p>Entities are represented by means of rectangles. Rectangles are named with the entity set they represent.</p>
+<img src="/entities.png" alt="Entities in a school database" />
+<h2>Attributes</h2>
+<p>Attributes are the properties of entities. Attributes are represented by means of ellipses. Every ellipse represents one attribute and is directly connected to its entity (rectangle).</p>
+<img src="/er_attributes.png" alt="Simple Attributes" />
+<p>If the attributes are <b>composite</b>, they are further divided in a tree like structure. Every node is then connected to its attribute. That is, composite attributes are represented by ellipses that are connected with an ellipse.</p>
+<img src="/er_attributes_composite.png" alt="Composite Attributes" />
+<p><b>Multivalued</b> attributes are depicted by double ellipse.</p>
+<img src="/er_attributes_multivalued.png" alt="Multivalued Attributes" />
+<p><b>Derived</b> attributes are depicted by dashed ellipse.</p>
+<img src="/er_attributes_derived.png" alt="Derived Attributes" />
+<h2>Relationship</h2>
+<p>Relationships are represented by diamond-shaped box. Name of the relationship is written inside the diamond-box. All the entities (rectangles) participating in a relationship, are connected to it by a line.</p>
+<h3>Binary Relationship and Cardinality</h3>
+<p>A relationship where two entities are participating is called a <b>binary relationship</b>. Cardinality is the number of instance of an entity from a relation that can be associated with the relation.</p>
+<ol>
+<li><p><b>One-to-one</b> &minus; When only one instance of an entity is associated with the relationship, it is marked as '1:1'. The following image reflects that only one instance of each entity should be associated with the relationship. It depicts one-to-one relationship.</p></li>
+<img src="/er_relation_one_to_one.png" alt="One-to-one" />
+<li><p><b>One-to-many</b> &minus; When more than one instance of an entity is associated with a relationship, it is marked as '1:N'. The following image reflects that only one instance of entity on the left and more than one instance of an entity on the right can be associated with the relationship. It depicts one-to-many relationship.</p></li>
+<img src="/er_relation_one_to_many.png" alt="One-to-many" />
+<li><p><b>Many-to-one</b> &minus; When more than one instance of entity is associated with the relationship, it is marked as 'N:1'. The following image reflects that more than one instance of an entity on the left and only one instance of an entity on the right can be associated with the relationship. It depicts many-to-one relationship.</p></li>
+<img src="/er_relation_many_to_one.png" alt="Many-to-one" />
+<li><p><b>Many-to-many</b> &minus; The following image reflects that more than one instance of an entity on the left and more than one instance of an entity on the right can be associated with the relationship. It depicts many-to-many relationship.</p></li></ol>
+<img src="/er_relation_many_to_many.png" alt="Many-to-many" />
+
+<h3>Participation Constraints</h3>
+<ol>
+<li><p><b>Total Participation</b> &minus; Each entity is involved in the relationship. Total participation is represented by double lines.</p></li>
+<li><p><b>Partial participation</b> &minus; Not all entities are involved in the relationship. Partial participation is represented by single lines.</p></li></ol>
+
+<br><br>
+<br><br>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
