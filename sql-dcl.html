@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>PL-SQL</h2>
+            <a href="sql-basic.html">SQL-BASIC</a>
+            <a href="sql-ddl.html">SQL-DDL</a>
+            <a href="sql-dml.html">SQL-DML</a>
+            <a href="sql-dcl.html">SQL-DCL</a>
+            <a href="sql-joins.html">SQL-JOINS</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>SQL-DCL</h2>
+
+        <h1 class="qa_title">What are the DCL commands in DBMS?</h1>
+<div class="qa_category">
+
+<hr/>
+<div id="adp_top_ads" style="text-align:center !important;"></div>
+</div>
+<hr/>
+<div id="divResources">
+</div>
+<div id="downloadContent">
+<p>Data control language (DCL) is used to access the stored data. It is mainly used for revoke and to grant the user the required access to a database. In the database, this language does not have the feature of rollback.</p><br>
+<p>It is a part of the structured query language (SQL).</p><br>
+<p>It helps in controlling access to information stored in a database. It complements the data manipulation language (DML) and the data definition language (DDL).</p><br>
+<p>It is the simplest among three commands.</p><br>
+<p>It provides the administrators, to remove and set database permissions to desired users as needed.</p><br>
+<p>These commands are employed to grant, remove and deny permissions to users for retrieving and manipulating a database.</p><br>
+
+
+<h2>DDL Commands</h2>
+<br><p>The Data Definition Language (DDL) commands are as follows &minus;</p><br>
+<h3>GRANT Command</h3>
+<p>It is employed to grant a privilege to a user. GRANT command allows specified users to perform specified tasks</p><br>
+<p><strong>Syntax</strong></p>
+<pre>GRANT privilege_name on objectname to user;</pre>
+<p>Here,</p><br>
+<p>privilege names are SELECT,UPDATE,DELETE,INSERT,ALTER,ALL</p><br>
+<p>objectname is table name</p><br>
+<p>user is the name of the user to whom we grant privileges</p><br>
+<br>
+<h3>REVOKE Command</h3><br>
+<p>It is employed to remove a privilege from a user. REVOKE helps the owner to cancel previously granted permissions.</p><br>
+<p><strong>Syntax</strong></p>
+<pre>&nbsp;REVOKE privilege_name on objectname from user;</pre>
+<p>Here,</p>
+<br>
+<p>privilege names are SELECT,UPDATE,DELETE,INSERT,ALTER,ALL</p><br>
+<p>objectname is table name</p><br>
+<p>user is the name of the user whose privileges are removing</p><br>
+
+<h3>Example</h3>
+<br>
+<pre>GRANT SELECT, UPDATE ON employees TO Bhanu</pre>
+<p>Explanation &minus; Firstly, to give the permissions to user, we have to use GRANT command. The privileges are SELECT because to view the records and UPDATE to modify the records. The objectname is table name which is Employee. The user name is bhanu.</p>
+<pre>REVOKE SELECT, UPDATE ON employees TO Bhanu</pre>
+<p>Explanation &minus; Firstly, to revoke the permissions to user, we have to use REVOKE command. The privileges Need to revoke are SELECT because to view the records and UPDATE to modify the records. The objectname is table name which is Employee. The user name is Bhanu.</p>
+</div>
+<br><br>
+<br><br>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

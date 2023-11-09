@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>PL-SQL</h2>
+            <a href="sql-basic.html">SQL-BASIC</a>
+            <a href="sql-ddl.html">SQL-DDL</a>
+            <a href="sql-dml.html">SQL-DML</a>
+            <a href="sql-dcl.html">SQL-DCL</a>
+            <a href="sql-joins.html">SQL-JOINS</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>SQL-DML</h2>
+
+        <h1 class="qa_title">What are the DML commands in DBMS?</h1><br>
+<hr/>
+
+
+<hr/>
+<div id="divResources">
+</div>
+<div id="downloadContent">
+<p>The structured query language (SQL) commands deal with the manipulation of data present in the database that belongs to the DML or Data Manipulation Language. This includes most of the SQL statements.</p>
+<h2>Examples of DML</h2>
+<br>
+<p>The examples of DML in the Database Management System (DBMS) are as follows &minus;</p>
+<br>
+<ol><li><p>SELECT &minus; Retrieve data from the database.</p></li><li><p>INSERT &minus; Insert data into a table.</p></li><li><p>UPDATE &minus; Update existing data within a table.</p></li><li><p>DELETE &minus; Delete records from a database table.</p></li></ol>
+
+<h2>Syntax for DML Commands</h2>
+<br><p>The syntax for the DML commands are as follows &minus;</p>
+<br><h3>INSERT</h3><p>Insert command is used to insert data into a table.</p><p>The syntax for insert command is as follows &minus;</p><br>
+<p><strong>Syntax</strong></p>
+<pre>Insert into &lt;table_name&gt; (column list) values (column values);</pre><p>For example, if we want to insert multiple rows to the Employee table, we can use the following command &minus;</p><br><p><strong>Example</strong></p>
+
+<pre>Insert into Employee(Emp_id, Emp_name) values (001, &ldquo; bhanu&rdquo;);
+Insert into Employee(Emp_id, Emp_name) values (002, &ldquo; hari&rdquo;);
+Insert into Employee(Emp_id, Emp_name) values (003, &ldquo; bob&rdquo;);</pre><h3>SELECT</h3>
+<br>
+<p>Select command is used to retrieve data from the database.</p><p>The syntax for the select command is as follows &minus;</p><br><p><strong>Syntax</strong></p>
+<br>
+<pre>SELECT * from &lt;table_name&gt;;</pre><p>For example, if we want to select all rows from the Employee database, we can use the following command &minus;</p><br>
+<p><strong>Example</strong></p>
+<br>
+<pre>SELECT * from Employee;</pre><h3>DELETE</h3>
+<br>
+<p>Delete command is used to delete records from a database table.</p><p>The syntax for the delete command is as follows -</p>
+<br>
+<p><strong>Syntax</strong></p>
+<br>
+<pre >&nbsp;Delete from &lt;table_name&gt;WHERE condition;</pre><p>For example, if we want to delete an entire row of employee id 002, we can use the following command &minus;</p><br><p><strong>Example</strong></p><br>
+<pre >DELETE from Employee WHERE Emp_id=002;</pre>
+<br>
+<h3>UPDATE</h3>
+<br><p>Update command is used to update existing data within a table.</p><p>The syntax for the update command is as follows -</p><br><p><strong>Syntax</strong></p><br><pre>UPDATE &lt;table_name&gt; SET column_number =value_number WHERE condition;</pre><p>For example, if we want to update the name of the employee having the employee id 001, we can use the command given below &minus;</p><br><p><strong>Example</strong></p><pre >UPDATE Employee SET Emp_name= Ram WHERE Emp_id= 001;</pre></div>
+
+
+
+<br><br>
+<br><br>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
