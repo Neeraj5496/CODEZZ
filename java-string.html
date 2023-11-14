@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Basic</h2>
+
+        <h1 class="h1">Java String</h1>
+<p>In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string. For example:</p>
+<div class="codeblock"><textarea name="code" class="java">
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};
+String s=new String(ch);
+</textarea></div>
+<p>is same as:</p>
+<div class="codeblock"><textarea name="code" class="java">
+String s="javatpoint";
+</textarea></div>
+<p><strong>Java String</strong> class provides a lot of methods to perform operations on strings such as compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.</p>
+<p>The java.lang.String class implements <em>Serializable</em>, <em>Comparable</em> and <em>CharSequence</em> interfaces.</p>
+<img src="https://static.javatpoint.com/images/core/string-implements.png" alt="String in Java" />
+<h2 class="h2">CharSequence Interface</h2>
+<p>The CharSequence interface is used to represent the sequence of characters. String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in Java by using these three classes.</p>
+<img src="https://static.javatpoint.com/images/core/charsequence.png" alt="CharSequence in Java" />
+<p>The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created. For mutable strings, you can use StringBuffer and StringBuilder classes.</p>
+<p>We will discuss immutable string later. Let's first understand what String in Java is and how to create the String object.</p>
+<h3 class="h2">What is String in Java?</h3>
+<p>Generally, String is a sequence of characters. But in Java, string is an object that represents a sequence of characters. The java.lang.String class is used to create a string object.</p>
+<a id="stringobjects"></a>
+<h3 class="h3">How to create a string object?</h3>
+<p>There are two ways to create String object:</p>
+<ol class="points">
+<li>By string literal</li>
+<li>By new keyword</li>
+</ol>
+<a id="stringliteral"></a>
+<h3 class="h2">1) String Literal</h3>
+<p>Java String literal is created by using double quotes. For Example:</p>
+<div class="codeblock"><textarea name="code" class="java">
+String s="welcome";
+</textarea></div>
+<p>Each time you create a string literal, the JVM checks the "string constant pool" first. If the string already exists in the pool, a reference to the pooled instance is returned. If the string doesn't exist in the pool, a new string instance is created and placed in the pool. For example:</p>
+<div class="codeblock"><textarea name="code" class="java">
+String s1="Welcome";
+String s2="Welcome";//It doesn't create a new instance
+</textarea></div>
+<br>
+<img src="https://static.javatpoint.com/core/images/java-string.png" alt="Java String" />
+<p>In the above example, only one object will be created. Firstly, JVM will not find any string object with the value "Welcome" in string constant pool that is why it will create a new object. After that it will find the string with the value "Welcome" in the pool, it will not create a new object but will return the reference to the same instance.</p>
+<h4 class="n">Note: String objects are stored in a special memory area known as the "string constant pool".</h4>
+<a id="stringwhyliteral"></a>
+<h3 class="h3">Why Java uses the concept of String literal?</h3>
+<p>To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).</p>
+<a id="stringnew"></a>
+<h3 class="h2">2) By new keyword</h3>
+<div class="codeblock"><textarea name="code" class="java">
+String s=new String("Welcome");//creates two objects and one reference variable
+</textarea></div>
+<p>In such case, JVM will create a new string object in normal (non-pool) heap memory, and the literal "Welcome" will be placed in the string constant pool. The variable s will refer to the object in a heap (non-pool).</p>
+<h3 class="h2">Java String Example</h3>
+<p><strong>StringExample.java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+public class StringExample{  
+public static void main(String args[]){  
+String s1="java";//creating string by Java string literal  
+char ch[]={'s','t','r','i','n','g','s'};  
+String s2=new String(ch);//converting char array to string  
+String s3=new String("example");//creating Java string by new keyword  
+System.out.println(s1);  
+System.out.println(s2);  
+System.out.println(s3);  
+}}  
+</textarea></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock3"><pre>java
+strings
+example
+</pre></div>
+<p>The above code, converts a <strong><em>char</em></strong> array into a <strong>String</strong> object. And displays the String objects <strong><em>s1, s2</em></strong>, and <strong><em>s3</em></strong> on console using <strong><em>println()</em></strong> method.</p>
+<h3 class="h2">Java String class methods</h3>
+<p>The java.lang.String class provides many useful methods to perform operations on sequence of char values.</p>
+<table class="alt">
+<tr><th>No.</th><th>Method</th><th>Description</th></tr>
+<tr><td>1</td><td>char charAt(int index)</td><td>It returns char value for the particular index</td></tr>
+<tr><td>2</td><td>int length()</td><td>It returns string length</td></tr>
+<tr><td>3</td><td>static String format(String format, Object... args)</td><td>It returns a formatted string.</td></tr>
+<tr><td>4</td><td>static String format(Locale l, String format, Object... args)</td><td>It returns formatted string with given locale.</td></tr>
+<tr><td>5</td><td>String substring(int beginIndex)</td><td>It returns substring for given begin index.</td></tr>
+<tr><td>6</td><td>String substring(int beginIndex, int endIndex)</td><td>It returns substring for given begin index and end index.</td></tr>
+<tr><td>7</td><td>boolean contains(CharSequence s)</td><td>It returns true or false after matching the sequence of char value.</td></tr>
+<tr><td>8</td><td>static String join(CharSequence delimiter, CharSequence... elements)</td><td>It returns a joined string.</td></tr>
+<tr><td>9</td><td> String join(CharSequence delimiter, Iterable&lt;? extends CharSequence&gt; elements)</td><td>It returns a joined string.</td></tr>
+<tr><td>10</td><td>boolean equals(Object another)</td><td>It checks the equality of string with the given object.</td></tr>
+<tr><td>11</td><td>boolean isEmpty()</td><td>It checks if string is empty.</td></tr>
+<tr><td>12</td><td>String concat(String str)</td><td>It concatenates the specified string.</td></tr>
+<tr><td>13</td><td>String replace(char old, char new)</td><td>It replaces all occurrences of the specified char value.</td></tr>
+<tr><td>14</td><td>String replace(CharSequence old, CharSequence new)</td><td>It replaces all occurrences of the specified CharSequence.</td>
+</tr>
+<tr><td>15</td><td>static String equalsIgnoreCase(String another)</td><td>It compares another string. It doesn't check case.</td></tr>
+<tr><td>16</td><td>String[] split(String regex)</td><td>It returns a split string matching regex.</td>
+<tr><td>17</td><td>String[] split(String regex, int limit)</td><td>It returns a split string matching regex and limit.</td>
+<tr><td>18</td><td>String intern()</td><td>It returns an interned string.</td>
+<tr><td>19</td><td>int indexOf(int ch)</td><td>It returns the specified char value index.</td></tr>
+<tr><td>20</td><td>int indexOf(int ch, int fromIndex)</td><td>It returns the specified char value index starting with given index.</td></tr>
+<tr><td>21</td><td>int indexOf(String substring)</td><td>It returns the specified substring index.</td></tr>
+<tr><td>22</td><td>int indexOf(String substring, int fromIndex)</td><td>It returns the specified substring index starting with given index.</td></tr>
+<tr><td>23</td><td>String toLowerCase()</td><td>It returns a string in lowercase.</td></tr>
+<tr><td>24</td><td>String toLowerCase(Locale l)</td><td>It returns a string in lowercase using specified locale.</td></tr>
+<tr><td>25</td><td>String toUpperCase()</td><td>It returns a string in uppercase.</td></tr>
+<tr><td>26</td><td>String toUpperCase(Locale l)</td><td>It returns a string in uppercase using specified locale.</td></tr>
+<tr><td>27</td><td>String trim()</td><td>It removes beginning and ending spaces of this string.</td></tr>
+<tr><td>28</td><td>static String valueOf(int value)</td><td>It converts given type into string. It is an overloaded method.</td></tr>
+</table>
+<br/>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

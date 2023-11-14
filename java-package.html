@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Package</h2>
+
+        <h1 class="h1">Java Package</h1>
+<p>A <b>java package</b> is a group of similar types of classes, interfaces and sub-packages.
+</p>
+<p>Package in java can be categorized in two form, built-in package and user-defined package. </p>
+<p>There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.</p>
+<p>Here, we will have the detailed learning of creating and using user-defined packages.
+</p>
+<h2 class="h4">Advantage of Java Package</h2>
+<p>1) Java package is used to categorize the classes and interfaces so that they can be easily maintained.</p>
+<p>2) Java package provides access protection.</p>
+<p>3) Java package removes naming collision.</p>
+<img src="https://static.javatpoint.com/images/package.JPG" alt="package in java" title="package" />
+<hr/>
+<a id="packageex"></a>
+<h2 class="h3ex">Simple example of java package</h2>
+<p>The <b>package keyword</b> is used to create a package in java.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//save as Simple.java
+package mypack;
+public class Simple{
+ public static void main(String args[]){
+    System.out.println("Welcome to package");
+   }
+}
+</textarea></div>
+<h2 class="h4">How to compile java package</h2>
+<p>If you are not using any IDE, you need to follow the <b>syntax</b> given below:</p>
+<div class="codeblock"><textarea name="code" class="java">
+javac -d directory javafilename
+</textarea></div>
+<p>For <b>example</b></p>
+<div class="codeblock"><textarea name="code" class="java">
+javac -d . Simple.java
+</textarea></div>
+<p>The -d switch specifies the destination where to put the generated class file. You can use any directory name like /home (in case of Linux), d:/abc (in case of windows) etc.
+If you want to keep the package within the same directory, you can use . (dot).
+<hr/>
+<h2 class="h4">How to run java package program</h2>
+<p>You need to use fully qualified name e.g. mypack.Simple etc to run the class.
+<hr/>
+<table>
+<tr><td><strong>To Compile:</strong> javac -d . Simple.java</td></tr>
+<tr><td><strong>To Run:</strong> java mypack.Simple</td></tr>
+</table>
+<div class="codeblock3"><pre>
+Output:Welcome to package
+</pre></div>
+<table>
+<tr><td>The -d is a switch that tells the compiler where to put the class file i.e. it represents destination. The . represents the current folder.
+</td></tr>
+</table>
+<hr/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<a id="packageaccess"></a>
+<h2 class="h2">How to access package from another package?</h2>
+<p>There are three ways to access the package from outside the package.</p>
+<ol>
+<li>import package.*;</li>
+<li>import package.classname;</li>
+<li>fully qualified name.</li>
+</ol>
+<h4 class="h2">1) Using packagename.*</h4>
+<p>If you use package.* then all the classes and interfaces of this package will be accessible but not subpackages.</tp>
+<p>The import keyword is used to make the classes and interface of another package accessible to the current package.</p>
+<a id="packageaccess1"></a>
+<h2 class="h3ex">Example of package that import the packagename.*</h2>
+<div class="codeblock"><textarea name="code" class="java">
+//save by A.java
+package pack;
+public class A{
+  public void msg(){System.out.println("Hello");}
+}
+</textarea></div>
+<div class="codeblock"><textarea name="code" class="java">
+//save by B.java
+package mypack;
+import pack.*;
+
+class B{
+  public static void main(String args[]){
+   A obj = new A();
+   obj.msg();
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:Hello
+</pre></div>
+<hr/>
+<a id="packageaccess2"></a>
+<h4 class="h2">2) Using packagename.classname</h4>
+<p>If you import package.classname then only declared class of this package will be accessible.</p>
+<h2 class="h3ex">Example of package by import package.classname</h2>
+<div class="codeblock"><textarea name="code" class="java">
+//save by A.java
+
+package pack;
+public class A{
+  public void msg(){System.out.println("Hello");}
+}
+</textarea></div>
+<div class="codeblock"><textarea name="code" class="java">
+//save by B.java
+package mypack;
+import pack.A;
+
+class B{
+  public static void main(String args[]){
+   A obj = new A();
+   obj.msg();
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:Hello
+</pre></div>
+<hr/>
+<a id="packageaccess3"></a>
+<h4 class="h2">3) Using fully qualified name</h4>
+<p>If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified name every time when you are accessing the class or interface.</p>
+<p>It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.</p>
+<h2 class="h3ex">Example of package by import fully qualified name</h2>
+<div class="codeblock"><textarea name="code" class="java">
+//save by A.java
+package pack;
+public class A{
+  public void msg(){System.out.println("Hello");}
+}
+</textarea></div>
+<div class="codeblock"><textarea name="code" class="java">
+//save by B.java
+package mypack;
+class B{
+  public static void main(String args[]){
+   pack.A obj = new pack.A();//using fully qualified name
+   obj.msg();
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:Hello
+</pre></div>
+<h4 class="n">Note: If you import a package, subpackages will not be imported.</h4>
+<p>If you import a package, all the classes and interface of that package will be imported excluding the classes and interfaces of the subpackages. Hence, you need to import the subpackage as well.</p>
+<hr/>
+<h4 class="h4">Note: Sequence of the program must be package then import then class.</h4>
+<img src="https://static.javatpoint.com/images/sequenceofpackage.JPG" alt="sequence of package" title="sequence of package" />
+<hr/>
+<a id="packagesub"></a>
+<h2 class="h2">Subpackage in java</h2>
+<p>Package inside the package is called the <b>subpackage</b>. It should be created <b>to categorize the package further</b>.</p>
+<p> Let's take an example, Sun Microsystem has definded a package named java that contains many classes like System, String, Reader, Writer, Socket etc. These classes represent a particular group e.g. Reader and Writer classes are for Input/Output operation, Socket and ServerSocket classes are for networking etc and so on. So, Sun has subcategorized the java package into subpackages such as lang, net, io etc. and put the Input/Output related classes in io package, Server and ServerSocket classes in net packages and so on.</p>
+<h4 id="n">The standard of defining package is domain.company.package e.g. com.javatpoint.bean or org.sssit.dao.</h4>
+<h3 class="h3ex">Example of Subpackage</h3>
+<div class="codeblock"><textarea name="code" class="java">
+package com.javatpoint.core;
+class Simple{
+  public static void main(String args[]){
+   System.out.println("Hello subpackage");
+  }
+}
+</textarea></div>
+<table>
+<tr><td><strong>To Compile:</strong> javac -d . Simple.java</td></tr>
+<tr><td><strong>To Run:</strong> java com.javatpoint.core.Simple</td></tr>
+</table>
+<div class="codeblock3"><pre>
+Output:Hello subpackage
+</pre></div>
+<hr/>
+<a id="packageanotherdirectory"></a>
+<h2 class="h2">How to send the class file to another directory or drive?</h2>
+<p>There is a scenario, I want to put the class file of A.java source file in classes folder of c: drive. For example:</p>
+<img src="https://static.javatpoint.com/images/anotherpackage.JPG" alt="how to put class file in another package" title="how to put class file in another package" />
+<div class="codeblock"><textarea name="code" class="java">
+//save as Simple.java
+package mypack;
+public class Simple{
+ public static void main(String args[]){
+    System.out.println("Welcome to package");
+   }
+}
+</textarea></div>
+<h3 class="h4">To Compile:</h3>
+<p><strong>e:\sources> javac -d c:\classes Simple.java</strong></p>
+<h3 class="h4">To Run:</h3>
+<table>
+<tr><td>To run this program from e:\source directory, you need to set classpath of the directory where the class file resides.</td></tr>
+<tr><td><strong>e:\sources> set classpath=c:\classes;.;</strong></td></tr>
+<tr><td><strong>e:\sources> java mypack.Simple</strong></td></tr>
+</table>
+<a id="packageclasspathswitch"></a>
+<h3 class="h3">Another way to run this program by -classpath switch of java:</h3>
+<p>The -classpath switch can be used with javac and java tool.</p>
+<p>To run this program from e:\source directory, you can use -classpath switch of java that tells where to look for class file. For example:</p>
+<p><strong>e:\sources> java -classpath c:\classes mypack.Simple</strong></p>
+<div class="codeblock3"><pre>
+Output:Welcome to package
+</pre></div>
+<hr/>
+<a id="packagewaystoload"></a>
+<h3 class="h3">Ways to load the class files or jar files</h3>
+<table>
+<tr><td>There are two ways to load the class files temporary and permanent.</td></tr>
+</table>
+<ul>
+<li>Temporary
+<ul>
+<li>By setting the classpath in the command prompt</li>
+<li>By -classpath switch</li>
+</ul>
+</li>
+<li>Permanent
+<ul>
+<li>By setting the classpath in the environment variables</li>
+<li>By creating the jar file, that contains all the class files, and copying the jar file in the jre/lib/ext folder. </li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h4 class="n">Rule: There can be only one public class in a java source file and it must be saved by the public class name.</h4>
+<div class="codeblock"><textarea name="code" class="java">
+//save as C.java otherwise Compilte Time Error
+
+class A{}
+class B{}
+public class C{}
+
+</textarea></div>
+<hr/>
+<a id="packagetwopublic"></a>
+<h3 class="h3">How to put two public classes in a package? </h3>
+<table>
+<tr><td>If you want to put two public classes in a package, have two java source files containing one public class, but keep the package name same. For example:</td></tr>
+</table>
+<div class="codeblock"><textarea name="code" class="java">
+//save as A.java
+
+package javatpoint;
+public class A{}
+
+</textarea></div>
+<div class="codeblock"><textarea name="code" class="java">
+//save as B.java
+
+package javatpoint;
+public class B{}
+
+</textarea></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

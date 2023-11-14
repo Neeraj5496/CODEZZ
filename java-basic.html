@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+            
+        </div>
+        
+        <div class="main">
+        <h2>Java Basic</h2>
+            <br>
+        <p>Java is a <strong>programming language</strong> and a <strong>platform</strong>. Java is a high level, robust, object-oriented and secure programming language.</p>
+<p>Java was developed by <em>Sun Microsystems</em> (which is now the subsidiary of Oracle) in the year 1995. <em>James Gosling</em> is known as the father of Java. Before Java, its name was <em>Oak</em>. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.</p>
+<p><strong>Platform</strong>: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.</p>
+<h2>Java Example</h2><br>
+<p>Let's have a quick look at Java programming example. A detailed description of Hello Java example is available in next page.</p><br>
+<p><strong>Simple.java</strong></p><br>
+
+class Simple{<br>
+    public static void main(String args[]){<br>
+     System.out.println("Hello Java");<br>
+    }<br>
+}
+
+<h2>Application</h2><br>
+<p>According to Sun, 3 billion devices run Java. There are many devices where Java is currently used. Some of them are as follows:</p>
+<ol class="points">
+<li>Desktop Applications such as acrobat reader, media player, antivirus, etc.</li>
+<li>Web Applications such as irctc.co.in, javatpoint.com, etc.</li>
+<li>Enterprise Applications such as banking applications.</li>
+<li>Mobile</li>
+<li>Embedded System</li>
+<li>Smart Card</li>
+<li>Robotics</li>
+<li>Games, etc.</li>
+</ol>
+<h2>Types of Java Applications</h2><br>
+<p>There are mainly 4 types of applications that can be created using Java programming:</p><br>
+<h4 class="h4">1) Standalone Application</h4>
+<p>Standalone applications are also known as desktop applications or window-based applications. These are traditional software that we need to install on every machine. Examples of standalone application are Media player, antivirus, etc. AWT and Swing are used in Java for creating standalone applications.</p><br>
+<h4 class="h4">2) Web Application</h4>
+<p>An application that runs on the server side and creates a dynamic page is called a web application. Currently,JSP,Struts,Spring, etc. technologies are used for creating web applications in Java.</p><br>
+<h4 class="h4">3) Enterprise Application</h4>
+<p>An application that is distributed in nature, such as banking applications, etc. is called an enterprise application. It has advantages like high-level security, load balancing, and clustering. In Java, is used for creating enterprise applications.</p><br>
+<h4 class="h4">4) Mobile Application</h4>
+<p>An application which is created for mobile devices is called a mobile application. Currently, Android and Java ME are used for creating mobile applications.</p><br>
+<h2 id="java-platforms" class="h2">Java Platforms / Editions</h2><br>
+<p>There are 4 platforms or editions of Java:</p><br>
+<h4 class="h4">1) Java SE (Java Standard Edition)</h4>
+<p>It is a Java programming platform. It includes Java programming APIs such as java.lang, java.io, java.net, java.util, java.sql, java.math etc. It includes core topics like OOPs,String</a>, Regex, Exception, Inner classes, Multithreading, I/O Stream, Networking, AWT, Swing, Reflection, Collection, etc.</p><br>
+<h4 class="h4">2) Java EE (Java Enterprise Edition)</h4>
+<p>It is an enterprise platform that is mainly used to develop web and enterprise applications. It is built on top of the Java SE platform. It includes topics like Servlet, JSP, Web Services, EJB etc.</p><br>
+<h4 class="h4">3) Java ME (Java Micro Edition)</h4>
+<p>It is a micro platform that is dedicated to mobile applications.</p><br>
+<h4 class="h4">4) JavaFX</h4>
+<p>It is used to develop rich internet applications. It uses a lightweight user interface API.</p><br>
+<h2 class="h2">Prerequisite</h2><br>
+<p>To learn Java, you must have the basic knowledge of C/C++ programming language.</p>
+<h2 class="h2">Audience</h2><br>
+<p>Our Java programming tutorial is designed to help beginners and professionals.</p>
+<h2 class="h2">Problem</h2><br>
+<p>We assure that you will not find any problem in this Java tutorial. However, if there is any mistake, please post the problem in the contact form.</p>
+<br/><br/>
+        
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

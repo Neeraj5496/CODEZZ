@@ -18,8 +18,15 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="#">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -33,7 +40,7 @@
         
         <div class="sidenav">
             <h2>DBMS</h2>
-            <a href="java.html">DBMS-Overview</a>
+            <a href="dbms_overview.html">DBMS-Overview</a>
             <a href="architecture.html">DBMS-Architecture</a>
             <a href="data-models.html">DBMS-Data Models</a>
             <a href="data-schemes.html">DBMS-Data Schemas</a>
@@ -44,13 +51,13 @@
             <a href="erbc.html">DBMS-ER Diagram Representation</a>
 
             <h2>Relation Model</h2>
-            <a href="">DBMS-Codd's Rules</a>
-            <a href="">DBMS-Relational Data Models</a>
+            <a href="codd.html">DBMS-Codd's Rules</a>
+            <a href="rdm.html">DBMS-Relational Data Models</a>
         
         </div>
         
         <div class="main">
-        <h2>DBMS-Overview</h2>
+        <h2>DBMS-Data Schema</h2>
 
         <h2>Database Schema</h2>
 <p>A database schema is the skeleton structure that represents the logical view of the entire database. It defines how the data is organized and how the relations among them are associated. It formulates all the constraints that are to be applied on the data.</p>
@@ -69,6 +76,6 @@
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

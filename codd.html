@@ -19,7 +19,14 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="#">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -50,7 +57,7 @@
         </div>
         
         <div class="main">
-        <h2>DBMS-Overview</h2>
+        <h2>DBMS-Codd's Rule</h2>
 
         <p>Dr Edgar F. Codd, after his extensive research on the Relational Model of database systems, came up with twelve rules of his own, which according to him, a database must obey in order to be regarded as a true relational database.</p>
 <p>These rules can be applied on any database system that manages stored data using only its relational capabilities. This is a foundation rule, which acts as a base for all the other rules.</p>
@@ -85,6 +92,6 @@
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -20,7 +20,14 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -28,7 +35,7 @@
 
             <div class="search">
                 <input class="srch" type="search" name="" placeholder="Type To text">
-                <a href="#"> <button class="btn">Search</button></a>
+                <a href=""> <button class="btn">Search</button></a>
             </div>
     
 <div class="container">
@@ -59,17 +66,17 @@
         </div>
 
         <div class="box">
-            <img src="icon-4.png" alt="">
-            <h3>SASS</h3>
+            <img src="java.svg" alt="">
+            <h3>JAVA</h3>
             <p>Lorem ipsum dolor sit amet consectetur</p>
             <a href="#" class="btn">read more</a>
         </div>
 
         <div class="box">
-            <img src="icon-5.png" alt="">
-            <h3>JQuery</h3>
+            <img src="mysql.svg" alt="">
+            <h3>MYSQL</h3>
             <p>Lorem ipsum dolor sit amet consectetur</p>
-            <a href="#" class="btn">read more</a>
+            <a href="sql-basic.html" class="btn">read more</a>
         </div>
 
         <div class="box">
@@ -82,6 +89,6 @@
     </div>
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

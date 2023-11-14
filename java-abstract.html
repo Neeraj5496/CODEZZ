@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Abstraction</h2>
+
+        <h1 class="h1">Abstract class in Java</h1>
+<p>A class which is declared with the abstract keyword is known as an abstract class in Java. It can have abstract and non-abstract methods (method with the body).</p>
+<p>Before learning the Java abstract class, let's understand the abstraction in Java first.</p>
+<hr/>
+<h3 class="h2">Abstraction in Java</h3>
+<p><strong>Abstraction</strong> is a process of hiding the implementation details and showing only functionality to the user.</p>
+<p>Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery.</p>
+<p>Abstraction lets you focus on what the object does instead of how it does it.
+</p>
+<h3 class="h4">Ways to achieve Abstraction</h3>
+<p>There are two ways to achieve abstraction in java</p>
+<ol>
+<li>Abstract class (0 to 100%)</li>
+<li>Interface (100%)</li>
+</ol>
+<hr/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h3 class="h2">Abstract class in Java</h3>
+<p>A class which is declared as abstract is known as an <strong>abstract class</strong>. It can have abstract and non-abstract methods. It needs to be extended and its method implemented. It cannot be instantiated.</p>
+<h4 class="h4">Points to Remember</h4>
+<ul class="points">
+<li>An abstract class must be declared with an abstract keyword.</li>
+<li>It can have abstract and non-abstract methods.</li>
+<li>It cannot be instantiated.</li>
+<li>It can have constructors and static methods also.</li>
+<li>It can have final methods which will force the subclass not to change the body of the method.</li>
+</ul>
+<img src="https://static.javatpoint.com/images/abstract-class-in-java.jpg" alt="Rules for Java Abstract class" />
+<p><strong>Example of abstract class</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+abstract class A{}
+</textarea></div>
+<hr/>
+<h3 class="h2">Abstract Method in Java</h3>
+<p>A method which is declared as abstract and does not have implementation is known as an abstract method.
+</p>
+<p><strong>Example of abstract method</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+abstract void printStatus();//no method body and abstract
+</textarea></div>
+<hr/>
+<h3 class="h3ex">Example of Abstract class that has an abstract method</h3>
+<p>In this example, Bike is an abstract class that contains only one abstract method run. Its implementation is provided by the Honda class.</p>
+<div class="codeblock"><textarea name="code" class="java">
+ abstract class Bike{
+   abstract void run();
+ }
+ class Honda4 extends Bike{
+ void run(){System.out.println("running safely");}
+ public static void main(String args[]){
+  Bike obj = new Honda4();
+  obj.run();
+ }
+ }
+</textarea></div>
+<div class="codeblock3"><pre>
+running safely
+</pre></div>
+<hr/>
+<h3 class="h2">Understanding the real scenario of Abstract class</h3>
+<p>In this example, Shape is the abstract class, and its implementation is provided by the Rectangle and Circle classes.</p>
+<p>Mostly, we don't know about the implementation class (which is hidden to the end user), and an object of the implementation class is provided by the <strong>factory method</strong>.</p>
+<p>A <strong>factory method</strong> is a method that returns the instance of the class. We will learn about the factory method later.</p>
+<p>In this example, if you create the instance of Rectangle class, draw() method of Rectangle class will be invoked.</p>
+<p class="filename">File: TestAbstraction1.java</p>
+<div class="codeblock"><textarea name="code" class="java">
+abstract class Shape{
+abstract void draw();
+}
+//In real scenario, implementation is provided by others i.e. unknown by end user
+class Rectangle extends Shape{
+void draw(){System.out.println("drawing rectangle");}
+}
+class Circle1 extends Shape{
+void draw(){System.out.println("drawing circle");}
+}
+//In real scenario, method is called by programmer or user
+class TestAbstraction1{
+public static void main(String args[]){
+Shape s=new Circle1();//In a real scenario, object is provided through method, e.g., getShape() method
+s.draw();
+}
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+drawing circle
+</pre></div>
+<hr/>
+<h3 class="h2">Another example of Abstract class in java</h3>
+<p class="filename">File: TestBank.java</p>
+<div class="codeblock"><textarea name="code" class="java">
+abstract class Bank{  
+abstract int getRateOfInterest();  
+}  
+class SBI extends Bank{  
+int getRateOfInterest(){return 7;}  
+}  
+class PNB extends Bank{  
+int getRateOfInterest(){return 8;}  
+}  
+  
+class TestBank{  
+public static void main(String args[]){  
+Bank b;
+b=new SBI();
+System.out.println("Rate of Interest is: "+b.getRateOfInterest()+" %");  
+b=new PNB();
+System.out.println("Rate of Interest is: "+b.getRateOfInterest()+" %");  
+}}  
+</textarea></div>
+<div class="codeblock3"><pre>
+Rate of Interest is: 7 %
+Rate of Interest is: 8 %
+</pre></div>
+<hr/>
+<h3 class="h2">Abstract class having constructor, data member and methods</h3>
+<p> An abstract class can have a data member, abstract method, method body (non-abstract method), constructor, and even main() method.</p>
+<p class="filename">File: TestAbstraction2.java</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Example of an abstract class that has abstract and non-abstract methods
+ abstract class Bike{
+   Bike(){System.out.println("bike is created");}
+   abstract void run();
+   void changeGear(){System.out.println("gear changed");}
+ }
+//Creating a Child class which inherits Abstract class
+ class Honda extends Bike{
+ void run(){System.out.println("running safely..");}
+ }
+//Creating a Test class which calls abstract and non-abstract methods
+ class TestAbstraction2{
+ public static void main(String args[]){
+  Bike obj = new Honda();
+  obj.run();
+  obj.changeGear();
+ }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+       bike is created
+       running safely..
+       gear changed
+</pre></div>
+<hr/>
+<h4 class="n">Rule: If there is an abstract method in a class, that class must be abstract.</h4>
+<div class="codeblock"><textarea name="code" class="java">
+   class Bike12{
+   abstract void run();
+   }
+</textarea></div>
+<div class="codeblock3"><pre>
+compile time error
+</pre></div>
+<h4 class="n">Rule: If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make this class abstract.</h4>
+<hr/>
+<h3 class="h2">Another real scenario of abstract class</h3>
+<p>The abstract class can also be used to provide some implementation of the interface. In such case, the end user may not be forced to override all the methods of the interface.</p>
+<h4 id="r">Note: If you are beginner to java, learn interface first and skip this example.</h4>
+<div class="codeblock"><textarea name="code" class="java">
+interface A{
+void a();
+void b();
+void c();
+void d();
+}
+
+abstract class B implements A{
+public void c(){System.out.println("I am c");}
+}
+
+class M extends B{
+public void a(){System.out.println("I am a");}
+public void b(){System.out.println("I am b");}
+public void d(){System.out.println("I am d");}
+}
+
+class Test5{
+public static void main(String args[]){
+A a=new M();
+a.a();
+a.b();
+a.c();
+a.d();
+}}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:I am a
+       I am b
+       I am c
+       I am d
+</pre></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

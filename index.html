@@ -19,7 +19,14 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -37,7 +44,7 @@
             </p>
 
             <button class="cn"><a href="sql-basic.html">PL/SQL</a></button>
-            <button class="cn"><a href="#">JAVA</a></button>
+            <button class="cn"><a href="java-basic.html">JAVA</a></button>
             <button class="cn"><a href="dbms_overview.html">DBMS</a></button>
 
                 <div class="form">
@@ -62,7 +69,7 @@
 
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
+    <script src="script.js"></script>
     
 </body>
 </html>

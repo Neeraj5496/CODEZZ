@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Basic</h2>
+
+        <h1 class="h1">Exception Handling in Java</h1>
+<p>The <strong>Exception Handling in Java</strong> is one of the powerful <em>mechanism to handle the runtime errors</em> so that the normal flow of the application can be maintained.</p>
+<p>In this tutorial, we will learn about Java exceptions, it's types, and the difference between checked and unchecked exceptions.</p>
+<h2 class="h2">What is Exception in Java? </h2>
+<p><strong>Dictionary Meaning:</strong> Exception is an abnormal condition.</p>
+<p>In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.</p>
+<h2 class="h2">What is Exception Handling?</h2>
+<p>Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.</p>
+<h3 id="exceptionad" class="h4">Advantage of Exception Handling</h3>
+<p>The core advantage of exception handling is <strong>to maintain the normal flow of the application</strong>. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a scenario:</p>
+<div class="codeblock"><textarea name="code" class="java">
+statement 1;
+statement 2;
+statement 3;
+statement 4;
+statement 5;//exception occurs
+statement 6;
+statement 7;
+statement 8;
+statement 9;
+statement 10;
+</textarea></div>
+<p>Suppose there are 10 statements in a Java program and an exception occurs at statement 5; the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. However, when we perform exception handling, the rest of the statements will be executed. That is why we use exception handling in .</p>
+<fieldset>
+<legend class="legendfont">Do You Know? </legend>
+<div id="youknow">
+<table>
+<tr><td>
+<ul class="points">
+<li>What is the difference between checked and unchecked exceptions?</li>
+<li>What happens behind the code int data=50/0;?</li>
+<li>Why use multiple catch block?</li>
+<li>Is there any possibility when the finally block is not executed?</li>
+<li>What is exception propagation?</li>
+<li>What is the difference between the throw and throws keyword?</li>
+<li>What are the 4 rules for using exception handling with method overriding?</li>
+</ul>
+</td></tr>
+</table>
+</div>
+</fieldset>
+<a id="exceptionhierarchy"></a>
+<h2 class="h2">Hierarchy of Java Exception classes</h2>
+<p>The java.lang.Throwable class is the root class of Java Exception hierarchy inherited by two subclasses: Exception and Error. The hierarchy of Java Exception classes is given below:</p>
+<img src="https://static.javatpoint.com/core/images/hierarchy-of-exception-handling.png" alt="hierarchy of exception handling" />
+<a id="exceptiontypes"></a>
+<h3 class="h2">Types of Java Exceptions</h3>
+<p>There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are three types of exceptions namely:</p>
+<ol class="points">
+<li>Checked Exception</li>
+<li>Unchecked Exception</li>
+<li>Error</li>
+</ol>
+<img src="https://static.javatpoint.com/core/images/types-of-exception-handling.png" alt="hierarchy of exception handling" />
+<h2 class="h2">Difference between Checked and Unchecked Exceptions</h2>
+<h3 id="exceptionchecked" class="h4">1) Checked Exception</h3>
+<p>The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.</p>
+<h3 id="exceptionunchecked" class="h4">2) Unchecked Exception</h3>
+<p>The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.</p>
+<h3 id="exceptionerror" class="h4">3) Error</h3>
+<p>Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.</p>
+<h2 class="h2">Java Exception Keywords</h2>
+<p>Java provides five keywords that are used to handle the exception. The following table describes each. </p>
+<table class="alt">
+<tr><th>Keyword</th><th>Description</th></tr>
+<tr><td>try</td><td>The "try" keyword is used to specify a block where we should place an exception code. It means we can't use try block alone. The try block must be followed by either catch or finally.</td></tr>
+<tr><td>catch</td><td>The "catch" block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.</td></tr>
+<tr><td>finally</td><td>The "finally" block is used to execute the necessary code of the program. It is executed whether an exception is handled or not.</td></tr>
+<tr><td>throw</td><td>The "throw" keyword is used to throw an exception.</td></tr>
+<tr><td>throws</td><td>The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in the method. It doesn't throw an exception. It is always used with method signature.</td></tr>
+</table>
+<h2 id="exceptionexample" class="h2">Java Exception Handling Example</h2>
+<p>Let's see an example of Java Exception Handling in which we are using a try-catch statement to handle the exception.</p>
+<p><strong>JavaExceptionExample.java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+public class JavaExceptionExample{
+  public static void main(String args[]){
+   try{
+      //code that may raise exception
+      int data=100/0;
+   }catch(ArithmeticException e){System.out.println(e);}
+   //rest code of the program 
+   System.out.println("rest of the code...");
+  }
+}
+</textarea></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock3"><pre>
+Exception in thread main java.lang.ArithmeticException:/ by zero
+rest of the code...
+</pre></div>
+<p>In the above example, 100/0 raises an ArithmeticException which is handled by a try-catch block.</p>
+<h2 id="exceptionscenarios" class="h2">Common Scenarios of Java Exceptions</h2>
+<p>There are given some scenarios where unchecked exceptions may occur. They are as follows:</p>
+<h3 class="h4">1) A scenario where ArithmeticException occurs</h3>
+<p>If we divide any number by zero, there occurs an ArithmeticException.</p>
+<div class="codeblock"><textarea name="code" class="java">
+int a=50/0;//ArithmeticException
+</textarea></div>
+<h3 class="h4">2) A scenario where NullPointerException occurs</h3>
+<p>If we have a null value in any variable, performing any operation on the variable throws a NullPointerException.</p>
+<div class="codeblock"><textarea name="code" class="java">
+String s=null;
+System.out.println(s.length());//NullPointerException
+</textarea></div>
+<h3 class="h4">3) A scenario where NumberFormatException occurs</h3>
+<p>If the formatting of any variable or number is mismatched, it may result into NumberFormatException. Suppose we have a string variable that has characters; converting this variable into digit will cause NumberFormatException.</p>
+<div class="codeblock"><textarea name="code" class="java">
+String s="abc";
+int i=Integer.parseInt(s);//NumberFormatException
+</textarea></div>
+<h3 class="h4">4) A scenario where ArrayIndexOutOfBoundsException occurs</h3>
+<p>When an array exceeds to it's size, the ArrayIndexOutOfBoundsException occurs. there may be other reasons to occur ArrayIndexOutOfBoundsException. Consider the following statements. </p>
+<div class="codeblock"><textarea name="code" class="java">
+int a[]=new int[5];
+a[10]=50; //ArrayIndexOutOfBoundsException
+</textarea></div>
+<h2 class="h2">Java Exceptions Index</h2>
+<ol class="points">
+<li>Java Try-Catch Block</li>
+<li>Java Multiple Catch Block</li>
+<li>Java Nested Try</li>
+<li>Java Finally Block</li>
+<li>Java Throw Keyword</li>
+<li>Java Exception Propagation</li>
+<li>Java Throws Keyword</li>
+<li>Java Throw vs Throws</li>
+<li>Java Final vs Finally vs Finalize</li>
+<li>Java Exception Handling with Method Overriding</li>
+<li>Java Custom Exceptions</li>
+</ol>
+<hr/>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

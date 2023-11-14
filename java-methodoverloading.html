@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Overloading</h2>
+
+        <h1 class="h1">Method Overloading in Java</h1>
+<p>If a class has multiple methods having same name but different in parameters, it is known as <strong>Method Overloading</strong>.
+</p>
+<p>If we have to perform only one operation, having same name of the methods increases the readability of the program. </p>
+<p>Suppose you have to perform addition of the given numbers but there can be any number of arguments, if you write the method such as a(int,int) for two parameters, and b(int,int,int) for three parameters then it may be difficult for you as well as other programmers to understand the behavior of the method because its name differs. </p>
+<p>So, we perform method overloading to figure out the program quickly.</p>
+<img src="https://static.javatpoint.com/images/overload1.jpg" alt="java method overloading" width="250" height="200" style="float:right;" />
+<h2 class="h4">Advantage of method overloading</h2>
+<p>Method overloading <em>increases the readability of the program</em>.</p>
+<a id="monumberofways"></a>
+<h3 class="h4">Different ways to overload the method</h3>
+<p>There are two ways to overload the method in java</p>
+<ol class="points">
+<li>By changing number of arguments</li>
+<li>By changing the data type</li>
+</ol>
+<h4 class="n">In Java, Method Overloading is not possible by changing the return type of the method only.</h4>
+<hr/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<a id="mobynumber"></a>
+<h3 class="h3ex">1) Method Overloading: changing no. of arguments</h3>
+<p>In this example, we have created two methods, first add() method performs addition of two numbers and second add method performs addition of three numbers.</p>
+<p>In this example, we are creating static methods so that we don't need to create instance for calling methods.</p>
+<div class="codeblock"><textarea name="code" class="java">
+class Adder{
+static int add(int a,int b){return a+b;}
+static int add(int a,int b,int c){return a+b+c;}
+}
+class TestOverloading1{
+public static void main(String[] args){
+System.out.println(Adder.add(11,11));
+System.out.println(Adder.add(11,11,11));
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+22
+33
+</pre></div>
+<br/>
+<hr/>
+<a id="mobydatatype"></a>
+<h3 class="h3ex">2) Method Overloading: changing data type of arguments</h3>
+<p>In this example, we have created two methods that differs in data type. The first add method receives two integer arguments and second add method receives two double arguments.</p>
+<div class="codeblock"><textarea name="code" class="java">
+class Adder{
+static int add(int a, int b){return a+b;}
+static double add(double a, double b){return a+b;}
+}
+class TestOverloading2{
+public static void main(String[] args){
+System.out.println(Adder.add(11,11));
+System.out.println(Adder.add(12.3,12.6));
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+22
+24.9
+</pre></div>
+<hr/>
+<a id="moreturntype"></a>
+<h3 class="h3">Q) Why Method Overloading is not possible by changing the return type of method only?</h3>
+<p>In java, method overloading is not possible by changing the return type of the method only because of ambiguity. Let's see how ambiguity may occur:</p>
+<div class="codeblock"><textarea name="code" class="java">
+class Adder{
+static int add(int a,int b){return a+b;}
+static double add(int a,int b){return a+b;}
+}
+class TestOverloading3{
+public static void main(String[] args){
+System.out.println(Adder.add(11,11));//ambiguity
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+Compile Time Error: method add(int,int) is already defined in class Adder
+</pre></div>
+<p>System.out.println(Adder.add(11,11)); //Here, how can java determine which sum() method should be called?</p>
+<h4 class="n">Note: Compile Time Error is better than Run Time Error. So, java compiler renders compiler time error if you declare the same method having same parameters.</h4>
+<a id="momainmethod"></a>
+<h3 class="h3"> Can we overload java main() method?</h3>
+<p>Yes, by method overloading. You can have any number of main methods in a class by method overloading. But JVM calls main() method which receives string array as arguments only. Let's see the simple example: </p>
+<div class="codeblock"><textarea name="code" class="java">
+class TestOverloading4{
+public static void main(String[] args){System.out.println("main with String[]");}
+public static void main(String args){System.out.println("main with String");}
+public static void main(){System.out.println("main without args");}
+}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+main with String[]
+</pre></div>
+<a id="motypepromotion"></a>
+<h2 class="h2">Method Overloading and Type Promotion</h2>
+<p>One type is promoted to another implicitly if no matching datatype is found. Let's understand the concept by the figure given below:</p>
+<img src="https://static.javatpoint.com/images/java-type-promotion.png" alt="Java Method Overloading with Type Promotion" />
+<p>As displayed in the above diagram, byte can be promoted to short, int, long, float or double. The short datatype can be promoted to int, long, float or double. The char datatype can be promoted to int,long,float or double and so on.</p>
+<h3 class="h3ex">Example of Method Overloading with TypePromotion</h3>
+<div class="codeblock"><textarea name="code" class="java">
+
+class OverloadingCalculation1{
+  void sum(int a,long b){System.out.println(a+b);}
+  void sum(int a,int b,int c){System.out.println(a+b+c);}
+
+  public static void main(String args[]){
+  OverloadingCalculation1 obj=new OverloadingCalculation1();
+  obj.sum(20,20);//now second int literal will be promoted to long
+  obj.sum(20,20,20);
+
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:40
+       60
+</pre></div>
+<hr/>
+<h3 class="h3ex">Example of Method Overloading with Type Promotion if matching found</h3>
+<p>If there are matching type arguments in the method, type promotion is not performed.</p>
+<div class="codeblock"><textarea name="code" class="java">
+class OverloadingCalculation2{
+  void sum(int a,int b){System.out.println("int arg method invoked");}
+  void sum(long a,long b){System.out.println("long arg method invoked");}
+
+  public static void main(String args[]){
+  OverloadingCalculation2 obj=new OverloadingCalculation2();
+  obj.sum(20,20);//now int arg sum() method gets invoked
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:int arg method invoked
+</pre></div>
+<h3 class="h3ex">Example of Method Overloading with Type Promotion in case of ambiguity</h3>
+<p>If there are no matching type arguments in the method, and each method promotes similar number of arguments, there will be ambiguity.</p>
+<div class="codeblock"><textarea name="code" class="java">
+
+class OverloadingCalculation3{
+  void sum(int a,long b){System.out.println("a method invoked");}
+  void sum(long a,int b){System.out.println("b method invoked");}
+
+  public static void main(String args[]){
+  OverloadingCalculation3 obj=new OverloadingCalculation3();
+  obj.sum(20,20);//now ambiguity
+  }
+}
+</textarea></div>
+<div class="codeblock3"><pre>
+Output:Compile Time Error
+       
+</pre></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

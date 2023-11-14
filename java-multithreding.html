@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Basic</h2>
+
+        <h1 class="h1">Multithreading in Java</h1>
+<p><strong>Multithreading in Java</strong> is a process of executing multiple threads simultaneously.</p>
+<p>A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.</p>
+<p>However, we use multithreading than multiprocessing because threads use a shared memory area. They don't allocate separate memory area so saves memory, and context-switching between the threads takes less time than process.
+</p>
+<p>Java Multithreading is mostly used in games, animation, etc.</p>
+<hr/>
+<h3 class="h3">Advantages of Java Multithreading</h3>
+<p>1) It <strong>doesn't block the user</strong> because threads are independent and you can perform multiple operations at the same time.</p>
+<p>2) You <strong>can perform many operations together, so it saves time</strong>.</p>
+<p>3) Threads are <strong>independent</strong>, so it doesn't affect other threads if an exception occurs in a single thread.</p>
+<hr/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 class="h2">Multitasking</h2>
+<p>Multitasking is a process of executing multiple tasks simultaneously. We use multitasking to utilize the CPU.
+Multitasking can be achieved in two ways:</p>
+<ul class="points">
+<li>Process-based Multitasking (Multiprocessing)</li>
+<li>Thread-based Multitasking (Multithreading)</li>
+</ul>
+<h3 class="h3">1) Process-based Multitasking (Multiprocessing)</h3>
+<ul class="points">
+<li>Each process has an address in memory. In other words, each process allocates a separate memory area.</li>
+<li>A process is heavyweight.</li>
+<li>Cost of communication between the process is high.</li>
+<li>Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.</li>
+</ul>
+<h3 class="h3">2) Thread-based Multitasking (Multithreading)</h3>
+<ul class="points">
+<li>Threads share the same address space.</li>
+<li>A thread is lightweight.</li>
+<li>Cost of communication between the thread is low.</li>
+</ul>
+<h4 class="n">Note: At least one process is required for each thread.</h4>
+<h2 class="h2">What is Thread in java</h2>
+<p>A thread is a lightweight subprocess, the smallest unit of processing. It is a separate path of execution.</p>
+<p>Threads are independent. If there occurs exception in one thread, it doesn't affect other threads. It uses a shared memory area.
+</p>
+<img alt="Java Multithreading" src="https://static.javatpoint.com/images/java-multithreading.png" />
+<p>As shown in the above figure, a thread is executed inside the process. There is context-switching between the threads. There can be multiple processes inside the OS, and one process can have multiple threads.
+</p>
+<h4 class="n">Note: At a time one thread is executed only.</h4>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 class="h2">Java Thread class </h2>
+<p>Java provides <strong>Thread class</strong> to achieve thread programming. Thread class provides constructors and methods to create and perform operations on a thread. Thread class extends Object class and implements Runnable interface.</p>
+<h2 class="h2">Java Thread Methods</h2>
+<table class="alt">
+<tr>
+<th>S.N.</th>
+<th>Modifier and Type</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>1)</td>
+<td>void</td>
+<td>start()</td>
+<td>It is used to start the execution of the thread.</td>
+</tr>
+<tr>
+<td>2)</td>
+<td>void</td>
+<td>run()</td>
+<td>It is used to do an action for a thread.</td>
+</tr>
+<tr>
+<td>3)</td>
+<td>static void</td>
+<td>sleep()</td>
+<td>It sleeps a thread for the specified amount of time.</td>
+</tr>
+<tr>
+<td>4)</td>
+<td>static Thread</td>
+<td>currentThread()</td>
+<td>It returns a reference to the currently executing thread object.</td>
+</tr>
+<tr>
+<td>5)</td>
+<td>void</td>
+<td>join()</td>
+<td>It waits for a thread to die.</td>
+</tr>
+<tr>
+<td>6)</td>
+<td>int</td>
+<td>getPriority()</td>
+<td>It returns the priority of the thread.</td>
+</tr>
+<tr>
+<td>7)</td>
+<td>void</td>
+<td>setPriority()</td>
+<td>It changes the priority of the thread.</td>
+</tr>
+<tr>
+<td>8)</td>
+<td>String</td>
+<td>getName()</td>
+<td>It returns the name of the thread.</td>
+</tr>
+<tr>
+<td>9)</td>
+<td>void</td>
+<td>setName()</td>
+<td>It changes the name of the thread.</td>
+</tr>
+<tr>
+<td>10)</td>
+<td>long</td>
+<td>getId()</td>
+<td>It returns the id of the thread.</td>
+</tr>
+
+<tr>
+<td>12)</td>
+<td>static void</td>
+<td>yield()</td>
+<td>It causes the currently executing thread object to pause and allow other threads to execute temporarily.</td>
+</tr>
+<tr>
+<td>13)</td>
+<td>void</td>
+<td>suspend()</td>
+<td>It is used to suspend the thread.</td>
+</tr>
+<tr>
+<td>14)</td>
+<td>void</td>
+<td>resume()</td>
+<td>It is used to resume the suspended thread.</td>
+</tr>
+<tr>
+<td>15)</td>
+<td>void</td>
+<td>stop()</td>
+<td>It is used to stop the thread.</td>
+</tr>
+<tr>
+<td>16)</td>
+<td>void</td>
+<td>destroytd>
+<td>It is used to destroy the thread group and all of its subgroups.</td>
+</tr>
+<tr>
+<td>17)</td>
+<td>boolean</td>
+<td>isDaemon()></td>
+<td>It tests if the thread is a daemon thread.</td>
+</tr>
+<tr>
+<td>18)</td>
+<td>void</td>
+<td>setDaemon()</td>
+<td>It marks the thread as daemon or user thread.</td>
+</tr>
+<tr>
+<td>19)</td>
+<td>void</td>
+<td>interrupt()</td>
+<td>It interrupts the thread.</td>
+</tr>
+<tr>
+<td>20)</td>
+<td>boolean</td>
+<td>isinterrupted()</td>
+<td>It tests whether the thread has been interrupted.</td>
+</tr><tr>
+<td>21)</td>
+<td>static boolean</td>
+<td>interrupted()</td>
+<td>It tests whether the current thread has been interrupted.</td>
+</tr>
+<tr>
+<td>22)</td>
+<td>static int</td>
+<td>activeCount()</td>
+<td>It returns the number of active threads in the current thread's thread group.</td>
+</tr>
+<tr>
+<td>23)</td>
+<td>void</td>
+<td>checkAccess()</td>
+<td>It determines if the currently running thread has permission to modify the thread.</td>
+</tr>
+<tr>
+<td>24)</td>
+<td>static boolean</td>
+<td>holdLock()</td>
+<td>It returns true if and only if the current thread holds the monitor lock on the specified object.</td>
+</tr>
+<tr>
+<td>25)</td>
+<td>static void</td>
+<td>dumpStack()</td>
+<td>It is used to print a stack trace of the current thread to the standard error stream.</td>
+</tr>
+<tr>
+<td>26)</td>
+<td>StackTraceElement[]</td>
+<td>getStackTrace()</td>
+<td>It returns an array of stack trace elements representing the stack dump of the thread.</td>
+</tr>
+<tr>
+<td>27)</td>
+<td>static int</td>
+<td>enumerate()</td>
+<td>It is used to copy every active thread's thread group and its subgroup into the specified array.</td>
+</tr>
+<tr>
+<td>28)</td>
+<td>Thread.State</td>
+<td>getState()</td>
+<td>It is used to return the state of the thread.</td>
+</tr>
+<tr>
+<td>29)</td>
+<td>ThreadGroup</td>
+<td>getThreadGroup()</td>
+<td>It is used to return the thread group to which this thread belongs</td>
+</tr>
+<tr>
+<td>30)</td>
+<td>String</td>
+<td>toString()</td>
+<td>It is used to return a string representation of this thread, including the thread's name, priority, and thread group.</td>
+</tr>
+<tr>
+<td>31)</td>
+<td>void</td>
+<td>notify()</td>
+<td>It is used to give the notification for only one thread which is waiting for a particular object.</td>
+</tr>
+<tr>
+<td>32)</td>
+<td>void</td>
+<td>notifyAll()</td>
+<td>It is used to give the notification to all waiting threads of a particular object.</td>
+</tr>
+<tr>
+<td>33)</td>
+<td>void</td>
+<td>setContextClassLoader()</td>
+<td>It sets the context ClassLoader for the Thread.</td>
+</tr>
+<tr>
+<td>34)</td>
+<td>ClassLoader</td>
+<td>getContextClassLoader()</td>
+<td>It returns the context ClassLoader for the thread.</td>
+</tr>
+<tr>
+<td>35)</td>
+<td>static Thread.UncaughtExceptionHandler</td>
+<td>getDefaultUncaughtExceptionHandler()</td>
+<td>It returns the default handler invoked when a thread abruptly terminates due to an uncaught exception.</td>
+</tr>
+<tr>
+<td>36)</td>
+<td>static void </td>
+<td>setDefaultUncaughtExceptionHandler()</td>
+<td>It sets the default handler invoked when a thread abruptly terminates due to an uncaught exception.</td>
+</tr>
+</table>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

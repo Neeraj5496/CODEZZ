@@ -18,8 +18,15 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="#">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -94,6 +101,6 @@ Insert into Employee(Emp_id, Emp_name) values (003, &ldquo; bob&rdquo;);</pre><h
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

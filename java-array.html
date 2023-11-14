@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="main1">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CODEZZ</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+        
+        <div class="sidenav">
+            <h2>JAVA</h2>
+            <a href="java-basic.html">Java Basic</a>
+            <a href="java-control-statement.html">Java Control Statements</a>
+            <a href="java-objectclass.html">Java OOPs Concepts</a>
+            <a href="java-inheritance.html">Java Inheritance</a>
+            <a href="java-methodoverloading.html">Java Overloading</a>
+            <a href="java-abstract.html">Java Abstraction</a>
+            <a href="java-package.html">Java Package</a>
+            <a href="java-array.html">Java Array</a>
+            <a href="java-string.html">Java String</a>
+            <a href="java-exception.html">Java Exception Handling</a>
+            <a href="java-multithreding.html">Java Multithreading</a>
+            <a href="java-awt.html">Java AWT</a>
+            <a href="java-applets.html">Java Applets</a>
+        
+        </div>
+        
+        <div class="main">
+        <h2>Java Arrays</h2>
+
+        <h1 class="h1">Java Arrays</h1>
+<p>Normally, an array is a collection of similar type of elements which has contiguous memory location.</p>
+<p><strong>Java array</strong> is an object which contains elements of a similar data type. Additionally, The elements of an array are stored in a contiguous memory location. It is a data structure where we store similar elements. We can store only a fixed set of elements in a Java array.</p>
+<p>Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on 1st index and so on. </p>
+<p>Unlike C/C++, we can get the length of the array using the length member. In C/C++, we need to use the sizeof operator. </p>
+<p>In Java, array is an object of a dynamically generated class. Java array inherits the Object class, and implements the Serializable as well as Cloneable interfaces. We can store primitive values or objects in an array in Java. Like C/C++, we can also create single dimentional or multidimentional arrays in Java.</p>
+<p>Moreover, Java provides the feature of anonymous arrays which is not available in C/C++.</p>
+<h3 class="h3">Advantages</h3>
+<ul class="points">
+<li><strong>Code Optimization:</strong> It makes the code optimized, we can retrieve or sort the data efficiently.</li>
+<li><strong>Random access:</strong> We can get any data located at an index position.</li>
+</ul>
+<h3 class="h3">Disadvantages</h3>
+<ul class="points">
+<li><strong>Size Limit:</strong> We can store only the fixed size of elements in the array. It doesn't grow its size at runtime. To solve this problem, collection framework is used in Java which grows automatically.</li>
+</ul>
+<hr/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h3 class="h2">Types of Array in java</h3>
+<p>There are two types of array.</p>
+<ul>
+<li>Single Dimensional Array</li>
+<li>Multidimensional Array</li>
+</ul>
+<hr/>
+<h2 class="h2">Single Dimensional Array in Java</h2>
+<p><strong>Syntax to Declare an Array in Java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+dataType[] arr; (or)
+dataType []arr; (or)
+dataType arr[];
+</textarea></div>
+<p><strong>Instantiation of an Array in Java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+arrayRefVar=new datatype[size];
+</textarea></div>
+<h3 class="h3ex">Example of Java Array</h3>
+<p>Let's see the simple example of java array, where we are going to declare, instantiate, initialize and traverse an array.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to illustrate how to declare, instantiate, initialize
+//and traverse the Java array.
+class Testarray{
+public static void main(String args[]){
+int a[]=new int[5];//declaration and instantiation
+a[0]=10;//initialization
+a[1]=20;
+a[2]=70;
+a[3]=40;
+a[4]=50;
+//traversing array
+for(int i=0;i&lt;a.length;i++)//length is the property of array
+System.out.println(a[i]);
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+10
+20
+70
+40
+50
+</pre></div>
+<hr/>
+<h2 class="h2">Declaration, Instantiation and Initialization of Java Array</h2>
+<p>We can declare, instantiate and initialize the java array together by:</p>
+<div class="codeblock"><textarea name="code" class="java">
+int a[]={33,3,4,5};//declaration, instantiation and initialization
+</textarea></div>
+<p>Let's see the simple example to print this array.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to illustrate the use of declaration, instantiation 
+//and initialization of Java array in a single line
+class Testarray1{
+public static void main(String args[]){
+int a[]={33,3,4,5};//declaration, instantiation and initialization
+//printing array
+for(int i=0;i&lt;a.length;i++)//length is the property of array
+System.out.println(a[i]);
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+33
+3
+4
+5
+</pre></div>
+<h2 class="h2">For-each Loop for Java Array</h2>
+<p>We can also print the Java array using <strong>for-each loop</strong>. The Java for-each loop prints the array elements one by one. It holds an array element in a variable, then executes the body of the loop.</p>
+<p>The syntax of the for-each loop is given below:</p>
+<div class="codeblock"><textarea name="code" class="java">
+for(data_type variable:array){
+//body of the loop
+}
+</textarea></div>
+<p>Let us see the example of print the elements of Java array using the for-each loop.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to print the array elements using for-each loop
+class Testarray1{
+public static void main(String args[]){
+int arr[]={33,3,4,5};
+//printing array using for-each loop
+for(int i:arr)
+System.out.println(i);
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+33
+3
+4
+5
+</pre></div>
+<hr/>
+<h2 class="h2">Passing Array to a Method in Java</h2>
+<p>We can pass the java array to method so that we can reuse the same logic on any array.</p>
+<p>Let's see the simple example to get the minimum number of an array using a method.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to demonstrate the way of passing an array
+//to method.
+class Testarray2{
+//creating a method which receives an array as a parameter
+static void min(int arr[]){
+int min=arr[0];
+for(int i=1;i&lt;arr.length;i++)
+ if(min&gt;arr[i])
+  min=arr[i];
+
+System.out.println(min);
+}
+
+public static void main(String args[]){
+int a[]={33,3,4,5};//declaring and initializing an array
+min(a);//passing array to method
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+3
+</pre></div>
+<h2 class="h2">Anonymous Array in Java</h2>
+<p>Java supports the feature of an anonymous array, so you don't need to declare the array while passing an array to the method.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to demonstrate the way of passing an anonymous array
+//to method.
+public class TestAnonymousArray{
+//creating a method which receives an array as a parameter
+static void printArray(int arr[]){
+for(int i=0;i&lt;arr.length;i++)
+System.out.println(arr[i]);
+}
+
+public static void main(String args[]){
+printArray(new int[]{10,22,44,66});//passing anonymous array to method
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+10
+22
+44
+66
+</pre></div>
+<h2 class="h2">Returning Array from the Method</h2>
+<p>We can also return an array from the method in Java.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to return an array from the method
+class TestReturnArray{
+//creating method which returns an array
+static int[] get(){
+return new int[]{10,30,50,90,60};
+}
+
+public static void main(String args[]){
+//calling method which returns an array
+int arr[]=get();
+//printing the values of an array
+for(int i=0;i<arr.length;i++)
+System.out.println(arr[i]);
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+10
+30
+50
+90
+60
+</pre></div>
+<h2 class="h2">ArrayIndexOutOfBoundsException</h2>
+<p>The Java Virtual Machine (JVM) throws an ArrayIndexOutOfBoundsException if length of the array in negative, equal to the array size or greater than the array size while traversing the array.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to demonstrate the case of 
+//ArrayIndexOutOfBoundsException in a Java Array.
+public class TestArrayException{
+public static void main(String args[]){
+int arr[]={50,60,70,80};
+for(int i=0;i&lt;=arr.length;i++){
+System.out.println(arr[i]);
+}
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+	at TestArrayException.main(TestArrayException.java:5)
+50
+60
+70
+80
+</pre></div>
+<hr/>
+<h2 class="h2">Multidimensional Array in Java</h2>
+<p>In such case, data is stored in row and column based index (also known as matrix form).</p>
+<p><strong>Syntax to Declare Multidimensional Array in Java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+dataType[][] arrayRefVar; (or)
+dataType [][]arrayRefVar; (or)
+dataType arrayRefVar[][]; (or)
+dataType []arrayRefVar[]; 
+</textarea></div>
+<p><strong>Example to instantiate Multidimensional Array in Java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+int[][] arr=new int[3][3];//3 row and 3 column
+</textarea></div>
+<p><strong>Example to initialize Multidimensional Array in Java</strong></p>
+<div class="codeblock"><textarea name="code" class="java">
+arr[0][0]=1;
+arr[0][1]=2;
+arr[0][2]=3;
+arr[1][0]=4;
+arr[1][1]=5;
+arr[1][2]=6;
+arr[2][0]=7;
+arr[2][1]=8;
+arr[2][2]=9;
+</textarea></div>
+<h3 class="h3ex">Example of Multidimensional Java Array</h3>
+<p>Let's see the simple example to declare, instantiate, initialize and print the 2Dimensional array.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to illustrate the use of multidimensional array
+class Testarray3{
+public static void main(String args[]){
+//declaring and initializing 2D array
+int arr[][]={{1,2,3},{2,4,5},{4,4,5}};
+//printing 2D array
+for(int i=0;i<3;i++){
+ for(int j=0;j<3;j++){
+   System.out.print(arr[i][j]+" ");
+ }
+ System.out.println();
+}
+}}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+1 2 3
+2 4 5
+4 4 5
+</pre></div>
+<h2 class="h2">Jagged Array in Java</h2>
+<p>If we are creating odd number of columns in a 2D array, it is known as a jagged array. In other words, it is an array of arrays with different number of columns.</p>
+<div class="codeblock"><textarea name="code" class="java">
+//Java Program to illustrate the jagged array
+class TestJaggedArray{
+    public static void main(String[] args){
+        //declaring a 2D array with odd columns
+        int arr[][] = new int[3][];
+        arr[0] = new int[3];
+        arr[1] = new int[4];
+        arr[2] = new int[2];
+        //initializing a jagged array
+        int count = 0;
+        for (int i=0; i<arr.length; i++)
+            for(int j=0; j<arr[i].length; j++)
+                arr[i][j] = count++;
+ 
+        //printing the data of a jagged array 
+        for (int i=0; i<arr.length; i++){
+            for (int j=0; j<arr[i].length; j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();//new line
+        }
+    }
+}
+</textarea></div>
+<p>Output:</p>
+<div class="codeblock3"><pre>
+0 1 2 
+3 4 5 6 
+7 8 
+</pre></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

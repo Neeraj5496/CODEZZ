@@ -18,8 +18,15 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">COURSE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown" onmouseover="showCourses()" onmouseout="hideCourses()">
+                        <a href="#">COURSES</a>
+                        <div class="dropdown-content">
+                          <a href="dbms_overview.html">DBMS</a>
+                          <a href="sql-basic.html">PL/SQL</a>
+                          <a href="java-basic.html">JAVA</a>
+                        </div>
+                    </li>
                     <li><a href="service.html">SERVICES</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -33,7 +40,7 @@
         
         <div class="sidenav">
             <h2>DBMS</h2>
-            <a href="java.html">DBMS-Overview</a>
+            <a href="dbms_overview.html">DBMS-Overview</a>
             <a href="architecture.html">DBMS-Architecture</a>
             <a href="data-models.html">DBMS-Data Models</a>
             <a href="data-schemes.html">DBMS-Data Schemas</a>
@@ -88,6 +95,6 @@
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
