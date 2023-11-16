@@ -42,7 +42,6 @@
             <h2>JAVA</h2>
             <a href="java-basic.html">Java Basic</a>
             <a href="java-control-statement.html">Java Control Statements</a>
-            <a href="java-objectclass.html">Java OOPs Concepts</a>
             <a href="java-inheritance.html">Java Inheritance</a>
             <a href="java-methodoverloading.html">Java Overloading</a>
             <a href="java-abstract.html">Java Abstraction</a>
@@ -57,7 +56,7 @@
         </div>
         
         <div class="main">
-        <h2>Java Basic</h2>
+        <h2>Java String</h2>
 
         <h1 class="h1">Java String</h1>
 <p>In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string. For example:</p>
@@ -71,22 +70,22 @@ String s="javatpoint";
 </textarea></div>
 <p><strong>Java String</strong> class provides a lot of methods to perform operations on strings such as compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.</p>
 <p>The java.lang.String class implements <em>Serializable</em>, <em>Comparable</em> and <em>CharSequence</em> interfaces.</p>
-<img src="https://static.javatpoint.com/images/core/string-implements.png" alt="String in Java" />
+
 <h2 class="h2">CharSequence Interface</h2>
 <p>The CharSequence interface is used to represent the sequence of characters. String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in Java by using these three classes.</p>
-<img src="https://static.javatpoint.com/images/core/charsequence.png" alt="CharSequence in Java" />
+
 <p>The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created. For mutable strings, you can use StringBuffer and StringBuilder classes.</p>
-<p>We will discuss immutable string later. Let's first understand what String in Java is and how to create the String object.</p>
-<h3 class="h2">What is String in Java?</h3>
+<p>We will discuss immutable string later. Let's first understand what String in Java is and how to create the String object.</p><br>
+<h3 >What is String in Java?</h3>
 <p>Generally, String is a sequence of characters. But in Java, string is an object that represents a sequence of characters. The java.lang.String class is used to create a string object.</p>
-<a id="stringobjects"></a>
-<h3 class="h3">How to create a string object?</h3>
+<br>
+<h3 >How to create a string object?</h3>
 <p>There are two ways to create String object:</p>
-<ol class="points">
+<ol >
 <li>By string literal</li>
 <li>By new keyword</li>
 </ol>
-<a id="stringliteral"></a>
+
 <h3 class="h2">1) String Literal</h3>
 <p>Java String literal is created by using double quotes. For Example:</p>
 <div class="codeblock"><textarea name="code" class="java">
@@ -98,13 +97,11 @@ String s1="Welcome";
 String s2="Welcome";//It doesn't create a new instance
 </textarea></div>
 <br>
-<img src="https://static.javatpoint.com/core/images/java-string.png" alt="Java String" />
+
 <p>In the above example, only one object will be created. Firstly, JVM will not find any string object with the value "Welcome" in string constant pool that is why it will create a new object. After that it will find the string with the value "Welcome" in the pool, it will not create a new object but will return the reference to the same instance.</p>
 <h4 class="n">Note: String objects are stored in a special memory area known as the "string constant pool".</h4>
-<a id="stringwhyliteral"></a>
 <h3 class="h3">Why Java uses the concept of String literal?</h3>
 <p>To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).</p>
-<a id="stringnew"></a>
 <h3 class="h2">2) By new keyword</h3>
 <div class="codeblock"><textarea name="code" class="java">
 String s=new String("Welcome");//creates two objects and one reference variable
@@ -130,8 +127,8 @@ strings
 example
 </pre></div>
 <p>The above code, converts a <strong><em>char</em></strong> array into a <strong>String</strong> object. And displays the String objects <strong><em>s1, s2</em></strong>, and <strong><em>s3</em></strong> on console using <strong><em>println()</em></strong> method.</p>
-<h3 class="h2">Java String class methods</h3>
-<p>The java.lang.String class provides many useful methods to perform operations on sequence of char values.</p>
+<h3 class="h2">Java String class methods</h3><br>
+<p>The java.lang.String class provides many useful methods to perform operations on sequence of char values.</p><br>
 <table class="alt">
 <tr><th>No.</th><th>Method</th><th>Description</th></tr>
 <tr><td>1</td><td>char charAt(int index)</td><td>It returns char value for the particular index</td></tr>

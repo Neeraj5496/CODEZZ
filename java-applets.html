@@ -42,7 +42,6 @@
             <h2>JAVA</h2>
             <a href="java-basic.html">Java Basic</a>
             <a href="java-control-statement.html">Java Control Statements</a>
-            <a href="java-objectclass.html">Java OOPs Concepts</a>
             <a href="java-inheritance.html">Java Inheritance</a>
             <a href="java-methodoverloading.html">Java Overloading</a>
             <a href="java-abstract.html">Java Abstraction</a>
@@ -57,35 +56,25 @@
         </div>
         
         <div class="main">
-        <h2>Java Basic</h2>
+        <h2>Java Applet</h2>
 
         <h1 class="h1">Java Applet</h1>
-<p>Applet is a special type of program that is embedded in the webpage to generate the dynamic content. It runs inside the browser and works at client side.</p>
+<p>Applet is a special type of program that is embedded in the webpage to generate the dynamic content. It runs inside the browser and works at client side.</p><br>
 <h3 class="h3">Advantage of Applet</h3>
 <p>There are many advantages of applet. They are as follows:</p>
-<ul class="points">
 <li>It works at client side so less response time.</li>
 <li>Secured</li>
-<li>It can be executed by browsers running under many plateforms, including Linux, Windows, Mac Os etc.</li>
-</ul>
+<li>It can be executed by browsers running under many plateforms, including Linux, Windows, Mac Os etc.</li><br>
 <h3 class="h3">Drawback of Applet</h3>
-<ul>
 <li>Plugin is required at client browser to execute applet.</li>
-</ul>
 <br/>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h3 class="h3">Hierarchy of Applet</h3>
 <img src="https://static.javatpoint.com/images/applethierarchy.jpg" alt="hierarchy of applet" />
 <table>
 <tr><td>As displayed in the above diagram, Applet class extends Panel. Panel class extends Container which is the subclass of Component.
 </td></tr>
 </table>
-<hr/>
+<hr/><br>
 <h3 class="h3">Lifecycle of Java Applet</h3>
 <ol class="points">
 <li>Applet is initialized.</li>
@@ -93,12 +82,12 @@
 <li>Applet is painted.</li>
 <li>Applet is stopped.</li>
 <li>Applet is destroyed.</li>
-</ol>
+</ol><br>
 <img src="https://static.javatpoint.com/images/applet-lifecycle.jpg" alt="Applet Lifecycle" />
-<hr/>
+<hr/><br>
 <h3 class="h3">Lifecycle methods for Applet:</h3>
 <p>The java.applet.Applet class 4 life cycle methods and java.awt.Component class provides 1 life cycle methods for an applet.
-</p>
+</p><br>
 <h3 class="h3">java.applet.Applet class</h3>
 <p>For creating any applet java.applet.Applet class must be inherited. It provides 4 life cycle methods of applet.</p>
 <ol>
@@ -106,23 +95,23 @@
 <li><strong>public void start():</strong> is invoked after the init() method or browser is maximized. It is used to start the Applet.</li>
 <li><strong>public void stop():</strong> is used to stop the Applet. It is invoked when Applet is stop or browser is minimized.</li>
 <li><strong>public void destroy():</strong> is used to destroy the Applet. It is invoked only once.</li>
-</ol>
+</ol><br>
 <h3 class="h3">java.awt.Component class</h3>
 <p>The Component class provides 1 life cycle method of applet.</p>
 <ol>
 <li><strong>public void paint(Graphics g):</strong> is used to paint the Applet. It provides Graphics class object that can be used for drawing oval, rectangle, arc etc. </li>
 </ol>
-<hr/>
+<hr/><br>
 <h3 class="h3">Who is responsible to manage the life cycle of an applet?</h3>
 <p>Java Plug-in software.</p>
-<hr/>
+<hr/><br>
 <h3 class="h3">How to run an Applet?</h3>
 <p>There are two ways to run an applet</p>
 <ol class="points">
 <li>By html file.</li>
 <li>By appletViewer tool (for testing purpose).</li>
 </ol>
-<hr/>
+<hr/><br>
 <h3 class="h3">Simple example of Applet by html file:</h3>
 <p>To execute the applet by html file, create an applet and compile it. After that create an html file and place the applet code in html file. Now click the html file.</p>
 <div class="codeblock"><textarea name="code" class="java">
@@ -150,7 +139,7 @@ g.drawString("welcome",150,150);
 &lt;/html&gt;
 
 </textarea></div>
-<hr/>
+<hr/><br>
 <h3 class="h3">Simple example of Applet by appletviewer tool:</h3>
 <p>To execute the applet by appletviewer tool, create an applet that contains applet tag in comment and compile it. After that run it by: appletviewer First.java. Now Html file is not required but it is for testing purpose only.</p>
 <div class="codeblock"><textarea name="code" class="java">

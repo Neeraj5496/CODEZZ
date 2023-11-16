@@ -42,7 +42,6 @@
             <h2>JAVA</h2>
             <a href="java-basic.html">Java Basic</a>
             <a href="java-control-statement.html">Java Control Statements</a>
-            <a href="java-objectclass.html">Java OOPs Concepts</a>
             <a href="java-inheritance.html">Java Inheritance</a>
             <a href="java-methodoverloading.html">Java Overloading</a>
             <a href="java-abstract.html">Java Abstraction</a>
@@ -57,65 +56,50 @@
         </div>
         
         <div class="main">
-        <h2>Java Basic</h2>
+        <h2>Java Inheritance</h2>
 
-        <h1 class="h1">Inheritance in Java</h1>
-<div id="upr">
-<ol>
-<li><a href="#">Inheritance</a></li>
-<li><a href="#inheritancetypes">Types of Inheritance</a></li>
-<li><a href="#inheritancenotmultiple">Why multiple inheritance is not possible in Java in case of class?</a></li>
-</ol>
-</div>
-<p><strong>Inheritance in Java</strong> is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of <a href="java-oops-concepts">OOPs</a> (Object Oriented programming system).</p>
-<p>The idea behind inheritance in Java is that you can create new <a href="object-and-class-in-java">classes</a> that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.</p>
-<p>Inheritance represents the <strong>IS-A relationship</strong> which is also known as a <em>parent-child</em> relationship.</p>
+        <h1 class="h1">Inheritance in Java</h1><br>
+<p><strong>Inheritance in Java</strong> is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system).</p>
+<p>The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.</p>
+<p>Inheritance represents the <strong>IS-A relationship</strong> which is also known as a <em>parent-child</em> relationship.</p><br>
 <h3 class="h3">Why use inheritance in java</h3>
-<ul class="points">
-<li>For <a href="method-overriding-in-java">Method Overriding</a> (so <a href="runtime-polymorphism-in-java">runtime polymorphism</a> can be achieved).</li>
+<li>For Method Overriding (so runtime polymorphism can be achieved).</li>
 <li>For Code Reusability.</li>
-</ul>
+<br>
 <h3 class="h3">Terms used in Inheritance</h3>
-<ul class="points">
 <li><strong>Class:</strong> A class is a group of objects which have common properties. It is a template or blueprint from which objects are created.</li>
 <li><strong>Sub Class/Child Class:</strong> Subclass is a class which inherits the other class. It is also called a derived class, extended class, or child class. </li>
 <li><strong>Super Class/Parent Class:</strong> Superclass is the class from where a subclass inherits the features. It is also called a base class or a parent class.</li>
 <li><strong>Reusability:</strong> As the name specifies, reusability is a mechanism which facilitates you to reuse the fields and methods of the existing class when you create a new class. You can use the same fields and methods already defined in the previous class. </li>
-</ul>
+<br>
 <h3 class="h3">The syntax of Java Inheritance</h3>
-<div class="codeblock"><textarea name="code" class="java">
-class Subclass-name extends Superclass-name
-{
-   //methods and fields
-}
-</textarea></div>
+<br>
+class Subclass-name extends Superclass-name <br>
+{<br>
+   //methods and fields <br>
+}<br>
+<br>
 <p>The <strong>extends keyword</strong> indicates that you are making a new class that derives from an existing class. The meaning of "extends" is to increase the functionality.</p>
 <p>In the terminology of Java, a class which is inherited is called a parent or superclass, and the new class is called child or subclass.</p>
 <hr/>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<br><br>
 <h3 class="h3ex">Java Inheritance Example</h3>
-<img src="https://static.javatpoint.com/images/core/inheritance.jpg" alt="Inheritance in Java" />
+<br>
 <p>As displayed in the above figure, Programmer is the subclass and Employee is the superclass. The relationship between the two classes is <strong>Programmer IS-A Employee</strong>. It means that Programmer is a type of Employee.
-</p>
-<div class="codeblock"><textarea name="code" class="java">
-class Employee{
- float salary=40000;
-}
-class Programmer extends Employee{
- int bonus=10000;
- public static void main(String args[]){
-   Programmer p=new Programmer();
-   System.out.println("Programmer salary is:"+p.salary);
-   System.out.println("Bonus of Programmer is:"+p.bonus);
-}
-}
-</textarea></div>
-<span class="testit"><a href="https://www.javatpoint.com/opr/test.jsp?filename=Programmer" target="_blank">Test it Now</a></span>
+</p><br>
+
+class Employee{<br>
+ float salary=40000;<br>
+}<br>
+class Programmer extends Employee{<br>
+ int bonus=10000;<br>
+ public static void main(String args[]){<br>
+   Programmer p=new Programmer();<br>
+   System.out.println("Programmer salary is:"+p.salary);<br>
+   System.out.println("Bonus of Programmer is:"+p.bonus);<br>
+}<br>
+}<br>
+<br>
 <div class="codeblock3"><pre>
  Programmer salary is:40000.0
  Bonus of programmer is:10000
@@ -123,117 +107,92 @@ class Programmer extends Employee{
 <p>In the above example, Programmer object can access the field of own class as well as of Employee class i.e. code reusability.
 </p>
 <hr/>
-<a id="inheritancetypes"></a>
-<h2 class="h2">Types of inheritance in java</h2>
+
+<h2 class="h2">Types of inheritance in java</h2><br>
 <p>On the basis of class, there can be three types of inheritance in java: single, multilevel and hierarchical.</p>
-<p>In java programming, multiple and hybrid inheritance is supported through interface only. We will learn about interfaces later.</p>
-<img src="https://static.javatpoint.com/images/core/typesofinheritance.jpg" alt="Types of inheritance in Java" />
-<h4 class="n">Note: Multiple inheritance is not supported in Java through class.</h4>
+<p>In java programming, multiple and hybrid inheritance is supported through interface only. We will learn about interfaces later.</p><br>
+<h4 class="n">Note: Multiple inheritance is not supported in Java through class.</h4><br>
 <p>When one class inherits multiple classes, it is known as multiple inheritance. For Example:</p>
-<img src="https://static.javatpoint.com/images/core/multiple.jpg" alt="Multiple inheritance in Java" />
+
 <hr/>
-<h2 class="h2">Single Inheritance Example</h2>
+<h2 class="h2">Single Inheritance Example</h2><br>
 <p>When a class inherits another class, it is known as a <em>single inheritance</em>. In the example given below, Dog class inherits the Animal class, so there is the single inheritance.</p>
 <p class="filename">File: TestInheritance.java</p>
-<div class="codeblock"><textarea name="code" class="java">
-class Animal{
-void eat(){System.out.println("eating...");}
-}
-class Dog extends Animal{
-void bark(){System.out.println("barking...");}
-}
-class TestInheritance{
-public static void main(String args[]){
-Dog d=new Dog();
-d.bark();
-d.eat();
-}}
-</textarea></div>
+<br>
+class Animal{<br>
+void eat(){System.out.println("eating...");}<br>
+}<br>
+class Dog extends Animal{<br>
+void bark(){System.out.println("barking...");}<br>
+}<br>
+class TestInheritance{<br>
+public static void main(String args[]){<br>
+Dog d=new Dog();<br>
+d.bark();<br>
+d.eat();<br>
+}}<br>
+<br>
 <p>Output:</p>
 <div class="codeblock3"><pre>
 barking...
 eating...
 </pre></div>
-<h2 class="h2">Multilevel Inheritance Example</h2>
+<h2 class="h2">Multilevel Inheritance Example</h2><br>
 <p>When there is a chain of inheritance, it is known as <em>multilevel inheritance</em>. As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class, so there is a multilevel inheritance.</p>
 <p class="filename">File: TestInheritance2.java</p>
-<div class="codeblock"><textarea name="code" class="java">
-class Animal{
-void eat(){System.out.println("eating...");}
-}
-class Dog extends Animal{
-void bark(){System.out.println("barking...");}
-}
-class BabyDog extends Dog{
-void weep(){System.out.println("weeping...");}
-}
-class TestInheritance2{
-public static void main(String args[]){
-BabyDog d=new BabyDog();
-d.weep();
-d.bark();
-d.eat();
-}}
-</textarea></div>
+<br>
+class Animal{<br>
+void eat(){System.out.println("eating...");}<br>
+}<br>
+class Dog extends Animal{<br>
+void bark(){System.out.println("barking...");}<br>
+}<br>
+class BabyDog extends Dog{<br>
+void weep(){System.out.println("weeping...");}<br>
+}<br>
+class TestInheritance2{<br>
+public static void main(String args[]){<br>
+BabyDog d=new BabyDog();<br>
+d.weep();<br>
+d.bark();<br>
+d.eat();<br>
+}}<br>
+<br>
 <p>Output:</p>
 <div class="codeblock3"><pre>
 weeping...
 barking...
 eating...
 </pre></div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-<ins class="adsbygoogle cm_jtp_wtc_responsive" style="display:inline-block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="6746133113"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<h2 class="h2">Hierarchical Inheritance Example</h2>
+<h2 class="h2">Hierarchical Inheritance Example</h2><br>
 <p>When two or more classes inherits a single class, it is known as <em>hierarchical inheritance</em>. In the example given below, Dog and Cat classes inherits the Animal class, so there is hierarchical inheritance.</p>
 <p class="filename">File: TestInheritance3.java</p>
-<div class="codeblock"><textarea name="code" class="java">
-class Animal{
-void eat(){System.out.println("eating...");}
-}
-class Dog extends Animal{
-void bark(){System.out.println("barking...");}
-}
-class Cat extends Animal{
-void meow(){System.out.println("meowing...");}
-}
-class TestInheritance3{
-public static void main(String args[]){
-Cat c=new Cat();
-c.meow();
-c.eat();
+<br>
+void eat(){System.out.println("eating...");}<br>
+class Animal{<br>
+}<br>
+class Dog extends Animal{<br>
+void bark(){System.out.println("barking...");}<br>
+}<br>
+class Cat extends Animal{<br>
+void meow(){System.out.println("meowing...");}<br>
+}<br>
+class TestInheritance3{<br>
+public static void main(String args[]){<br>
+Cat c=new Cat();<br>
+c.meow();<br>
+c.eat();<br>
 //c.bark();//C.T.Error
-}}
-</textarea></div>
+}}<br>
+
 <p>Output:</p>
 <div class="codeblock3"><pre>
 meowing...
 eating...
 </pre></div>
 <hr/>
-<a id="inheritancenotmultiple"></a>
-<h2 class="h2">Q) Why multiple inheritance is not supported in java?</h2>
-<p>To reduce the complexity and simplify the language, multiple inheritance is not supported in java. </p>
-<p>Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from child class object, there will be ambiguity to call the method of A or B class.</p>
-<p>Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 2 classes. So whether you have same method or different, there will be compile time error.</p>
-<div class="codeblock"><textarea name="code" class="java">
-class A{
-void msg(){System.out.println("Hello");}
-}
-class B{
-void msg(){System.out.println("Welcome");}
-}
-class C extends A,B{//suppose if it were
- 
- public static void main(String args[]){
-   C obj=new C();
-   obj.msg();//Now which msg() method would be invoked?
-}
-}
-</textarea></div>
+
         </div>
 
     </div>

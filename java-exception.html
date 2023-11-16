@@ -42,7 +42,6 @@
             <h2>JAVA</h2>
             <a href="java-basic.html">Java Basic</a>
             <a href="java-control-statement.html">Java Control Statements</a>
-            <a href="java-objectclass.html">Java OOPs Concepts</a>
             <a href="java-inheritance.html">Java Inheritance</a>
             <a href="java-methodoverloading.html">Java Overloading</a>
             <a href="java-abstract.html">Java Abstraction</a>
@@ -57,7 +56,7 @@
         </div>
         
         <div class="main">
-        <h2>Java Basic</h2>
+        <h2>Java Exception Handling</h2>
 
         <h1 class="h1">Exception Handling in Java</h1>
 <p>The <strong>Exception Handling in Java</strong> is one of the powerful <em>mechanism to handle the runtime errors</em> so that the normal flow of the application can be maintained.</p>
@@ -65,29 +64,30 @@
 <h2 class="h2">What is Exception in Java? </h2>
 <p><strong>Dictionary Meaning:</strong> Exception is an abnormal condition.</p>
 <p>In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.</p>
-<h2 class="h2">What is Exception Handling?</h2>
+<h2 class="h2">What is Exception Handling?</h2><br>
 <p>Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.</p>
 <h3 id="exceptionad" class="h4">Advantage of Exception Handling</h3>
-<p>The core advantage of exception handling is <strong>to maintain the normal flow of the application</strong>. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a scenario:</p>
-<div class="codeblock"><textarea name="code" class="java">
-statement 1;
-statement 2;
-statement 3;
-statement 4;
-statement 5;//exception occurs
-statement 6;
-statement 7;
-statement 8;
-statement 9;
-statement 10;
-</textarea></div>
+<p>The core advantage of exception handling is <strong>to maintain the normal flow of the application</strong>. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a scenario:</p><br>
+    <em>
+
+        statement 1;<br>
+        statement 2;<br>
+        statement 3;<br>
+        statement 4;<br>
+        statement 5;//exception occurs<br>
+        statement 6;<br>
+        statement 7;<br>
+        statement 8;<br>
+        statement 9;<br>
+        statement 10;<br>
+    </em>
+<br>
 <p>Suppose there are 10 statements in a Java program and an exception occurs at statement 5; the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. However, when we perform exception handling, the rest of the statements will be executed. That is why we use exception handling in .</p>
 <fieldset>
-<legend class="legendfont">Do You Know? </legend>
-<div id="youknow">
+<legend >Do You Know? </legend>
+<div >
 <table>
 <tr><td>
-<ul class="points">
 <li>What is the difference between checked and unchecked exceptions?</li>
 <li>What happens behind the code int data=50/0;?</li>
 <li>Why use multiple catch block?</li>
@@ -95,13 +95,12 @@ statement 10;
 <li>What is exception propagation?</li>
 <li>What is the difference between the throw and throws keyword?</li>
 <li>What are the 4 rules for using exception handling with method overriding?</li>
-</ul>
 </td></tr>
 </table>
 </div>
 </fieldset>
 <a id="exceptionhierarchy"></a>
-<h2 class="h2">Hierarchy of Java Exception classes</h2>
+<h2 class="h2">Hierarchy of Java Exception classes</h2><br>
 <p>The java.lang.Throwable class is the root class of Java Exception hierarchy inherited by two subclasses: Exception and Error. The hierarchy of Java Exception classes is given below:</p>
 <img src="https://static.javatpoint.com/core/images/hierarchy-of-exception-handling.png" alt="hierarchy of exception handling" />
 <a id="exceptiontypes"></a>
@@ -113,14 +112,14 @@ statement 10;
 <li>Error</li>
 </ol>
 <img src="https://static.javatpoint.com/core/images/types-of-exception-handling.png" alt="hierarchy of exception handling" />
-<h2 class="h2">Difference between Checked and Unchecked Exceptions</h2>
+<h2 class="h2">Difference between Checked and Unchecked Exceptions</h2><br>
 <h3 id="exceptionchecked" class="h4">1) Checked Exception</h3>
 <p>The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.</p>
 <h3 id="exceptionunchecked" class="h4">2) Unchecked Exception</h3>
 <p>The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.</p>
 <h3 id="exceptionerror" class="h4">3) Error</h3>
 <p>Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.</p>
-<h2 class="h2">Java Exception Keywords</h2>
+<h2 class="h2">Java Exception Keywords</h2><br>
 <p>Java provides five keywords that are used to handle the exception. The following table describes each. </p>
 <table class="alt">
 <tr><th>Keyword</th><th>Description</th></tr>
@@ -146,37 +145,37 @@ public class JavaExceptionExample{
 }
 </textarea></div>
 <p><strong>Output:</strong></p>
-<div class="codeblock3"><pre>
+<div ><pre>
 Exception in thread main java.lang.ArithmeticException:/ by zero
 rest of the code...
 </pre></div>
 <p>In the above example, 100/0 raises an ArithmeticException which is handled by a try-catch block.</p>
-<h2 id="exceptionscenarios" class="h2">Common Scenarios of Java Exceptions</h2>
+<h2 >Common Scenarios of Java Exceptions</h2><br>
 <p>There are given some scenarios where unchecked exceptions may occur. They are as follows:</p>
 <h3 class="h4">1) A scenario where ArithmeticException occurs</h3>
 <p>If we divide any number by zero, there occurs an ArithmeticException.</p>
-<div class="codeblock"><textarea name="code" class="java">
+<div >
 int a=50/0;//ArithmeticException
 </textarea></div>
 <h3 class="h4">2) A scenario where NullPointerException occurs</h3>
 <p>If we have a null value in any variable, performing any operation on the variable throws a NullPointerException.</p>
-<div class="codeblock"><textarea name="code" class="java">
+<div ><textarea >
 String s=null;
 System.out.println(s.length());//NullPointerException
 </textarea></div>
 <h3 class="h4">3) A scenario where NumberFormatException occurs</h3>
 <p>If the formatting of any variable or number is mismatched, it may result into NumberFormatException. Suppose we have a string variable that has characters; converting this variable into digit will cause NumberFormatException.</p>
-<div class="codeblock"><textarea name="code" class="java">
+<div> <textarea >
 String s="abc";
 int i=Integer.parseInt(s);//NumberFormatException
 </textarea></div>
 <h3 class="h4">4) A scenario where ArrayIndexOutOfBoundsException occurs</h3>
 <p>When an array exceeds to it's size, the ArrayIndexOutOfBoundsException occurs. there may be other reasons to occur ArrayIndexOutOfBoundsException. Consider the following statements. </p>
-<div class="codeblock"><textarea name="code" class="java">
+<div ><textarea >
 int a[]=new int[5];
 a[10]=50; //ArrayIndexOutOfBoundsException
 </textarea></div>
-<h2 class="h2">Java Exceptions Index</h2>
+<h2 class="h2">Java Exceptions Index</h2><br>
 <ol class="points">
 <li>Java Try-Catch Block</li>
 <li>Java Multiple Catch Block</li>
